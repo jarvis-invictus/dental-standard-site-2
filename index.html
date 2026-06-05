@@ -2,9 +2,16 @@
 <html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="noindex, nofollow">
-    <title>Dentalist | Example Designing & Developing Website</title>
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="Experience premium dental care at Dentalist - Smile Dental Clinic, Pune. Specialized in root canals, teeth alignment, implants, and teeth whitening in Aundh. Book an appointment today!">
+    <meta name="keywords" content="dentist Pune, dental clinic Aundh, root canal Pune, teeth alignment Pune, dental implants Pune, teeth whitening Aundh, Dentalist Pune">
+    <link rel="canonical" href="https://smiledentalclinic.in/">
+    <meta property="og:title" content="Dentalist - Premium Smile Dental Clinic in Aundh, Pune">
+    <meta property="og:description" content="Experience premium dental care at Dentalist - Smile Dental Clinic, Pune. Specialized in root canals, teeth alignment, implants, and teeth whitening in Aundh. Book an appointment today!">
+    <meta property="og:url" content="https://smiledentalclinic.in/">
+    <meta property="og:site_name" content="Dentalist - Smile Dental Clinic">
+    <meta property="og:type" content="website">
+    <title>Dentalist - Premium Smile Dental Clinic in Aundh, Pune</title>
     <!-- Stylesheet -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="./styles/main.css" type="text/css">
@@ -20,6 +27,62 @@
     <!-- Scripts -->
     <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script defer src="./scripts/main.js"></script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Dentist",
+      "@id": "https://smiledentalclinic.in/#dentist",
+      "name": "Dentalist - Smile Dental Clinic",
+      "url": "https://smiledentalclinic.in",
+      "logo": "https://smiledentalclinic.in/assets/images/logo.svg",
+      "image": "https://smiledentalclinic.in/assets/images/top-main.webp",
+      "description": "Premium Dental Care for Your Family's Smile in Aundh, Pune. Painless root canals, teeth alignment, and dental implants by Pune's leading specialists.",
+      "telephone": "+919699577641",
+      "email": "contact@smiledentalclinic.in",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "123, ITI Road, Near Bata Showroom, Aundh",
+        "addressLocality": "Pune",
+        "addressRegion": "Maharashtra",
+        "postalCode": "411007",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "18.5602",
+        "longitude": "73.8031"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "opens": "10:00",
+          "closes": "20:00"
+        }
+      ],
+      "sameAs": [
+        "https://www.facebook.com/yourclinic",
+        "https://www.instagram.com/yourclinic",
+        "https://twitter.com/yourclinic"
+      ],
+      "knowsAbout": [
+        "Dentures",
+        "Implants",
+        "Teeth Whitening",
+        "Root Canal Therapy",
+        "Dental Consultation"
+      ]
+    }
+    </script>
 </head>
 <body>
     <!-- SVG Importing -->
@@ -72,38 +135,38 @@
         <span class="preload"></span>
     </div>
     <!-- Header -->
-    <header class="h-[100px]">
+    <header class="h-[100px]" id="home">
         <div class="container flex items-center h-full">
             <div class="flex justify-between items-center h-12 w-full">
                 <!-- Header Logo -->
-                <a href="https://2awebdeveloper.github.io/dentalist/">
+                <a href="#home">
                     <img src="./assets/images/logo.svg" alt="Site-Logo">
                 </a>
                 <!-- Header Menu -->
                 <nav class="hidden lg:block">
                     <ul class="flex gap-x-10 xl:gap-x-12 text-slate-800 text-sm font-bold child:transition-colors child:delay-75 child-hover:text-primary">
                         <li>
-                            <a href="#">Home</a>
+                            <a href="#home">Home</a>
                         </li>
                         <li>
-                            <a href="#">Services</a>
+                            <a href="#services">Services</a>
                         </li>
                         <li>
-                            <a href="#">Products</a>
+                            <a href="#features">Features</a>
                         </li>
                         <li>
-                            <a href="#">Blog</a>
+                            <a href="#testimonials">Testimonials</a>
                         </li>
                         <li>
-                            <a href="#">About Us</a>
+                            <a href="#blog">Blog</a>
                         </li>
                         <li>
-                            <a href="#">Contact Us</a>
+                            <a href="#contact">Contact Us</a>
                         </li>
                     </ul>
                 </nav>
                 <!-- Header Button -->
-                <a class="hidden lg:block h-full w-44 bg-primary text-white text-sm font-bold text-center leading-[3rem] rounded-xl transition-colors hover:bg-indigo-800" href="#">Book appointment</a>
+                <a class="hidden lg:block h-full w-44 bg-primary text-white text-sm font-bold text-center leading-[3rem] rounded-xl transition-colors hover:bg-indigo-800" href="https://wa.me/919699577641?text=Hi%2C%20I%20would%20like%20to%20book%20an%20appointment%20at%20Dentalist%20Smile%20Dental%20Clinic." target="_blank" rel="noopener noreferrer">Book appointment</a>
                 <!-- Mobile Menu -->
                 <div class="lg:hidden relative">
                     <!-- Mobile Menu Toggle Icon -->
@@ -132,7 +195,7 @@
                             <ul class="flex flex-col gap-y-5 text-slate-800 text-sm font-medium child:transition-colors child:delay-75 child-hover:text-primary">
                                 <!-- menu item -->
                                 <li>
-                                    <a class="flex items-center gap-x-1" href="#">
+                                    <a class="flex items-center gap-x-1" href="#home">
                                         <svg class="w-5 h-5">
                                             <use href="#home"></use>
                                         </svg>
@@ -141,7 +204,7 @@
                                 </li>
                                 <!-- menu item -->
                                 <li>
-                                    <a class="flex items-center gap-x-1" href="#">
+                                    <a class="flex items-center gap-x-1" href="#services">
                                         <svg class="w-5 h-5">
                                             <use href="#gear"></use>
                                         </svg>
@@ -150,16 +213,25 @@
                                 </li>
                                 <!-- menu item -->
                                 <li>
-                                    <a class="flex items-center gap-x-1" href="#">
+                                    <a class="flex items-center gap-x-1" href="#features">
                                         <svg class="w-5 h-5">
-                                            <use href="#shop"></use>
+                                            <use href="#check-circle"></use>
                                         </svg>
-                                        Products
+                                        Features
                                     </a>
                                 </li>
                                 <!-- menu item -->
                                 <li>
-                                    <a class="flex items-center gap-x-1" href="#">
+                                    <a class="flex items-center gap-x-1" href="#testimonials">
+                                        <svg class="w-5 h-5">
+                                            <use href="#users"></use>
+                                        </svg>
+                                        Testimonials
+                                    </a>
+                                </li>
+                                <!-- menu item -->
+                                <li>
+                                    <a class="flex items-center gap-x-1" href="#blog">
                                         <svg class="w-5 h-5">
                                             <use href="#rss"></use>
                                         </svg>
@@ -168,16 +240,7 @@
                                 </li>
                                 <!-- menu item -->
                                 <li>
-                                    <a class="flex items-center gap-x-1" href="#">
-                                        <svg class="w-5 h-5">
-                                            <use href="#users"></use>
-                                        </svg>
-                                        About Us
-                                    </a>
-                                </li>
-                                <!-- menu item -->
-                                <li>
-                                    <a class="flex items-center gap-x-1" href="#">
+                                    <a class="flex items-center gap-x-1" href="#contact">
                                         <svg class="w-5 h-5">
                                             <use href="#envelope"></use>
                                         </svg>
@@ -188,7 +251,7 @@
                         </nav>
                         <!-- Button -->
                         <div class="p-4">
-                            <a class="block w-full h-12 leading-[2.8rem] bg-primary text-white text-sm font-bold text-center rounded-xl transition-colors hover:bg-indigo-800" href="#">Book appointment</a>
+                            <a class="block w-full h-12 leading-[2.8rem] bg-primary text-white text-sm font-bold text-center rounded-xl transition-colors hover:bg-indigo-800" href="https://wa.me/919699577641?text=Hi%2C%20I%20would%20like%20to%20book%20an%20appointment%20at%20Dentalist%20Smile%20Dental%20Clinic." target="_blank" rel="noopener noreferrer">Book appointment</a>
                         </div>
                     </div>
                 </div>
@@ -203,10 +266,10 @@
                 <div class="bg-top-main pt-8 px-8 lg:pt-0 rounded-3xl lg:min-h-[500px] xl:min-h-[620px] 2xl:min-h-[760px] gap-y-14 flex flex-col lg:flex-row justify-between items-center bg-[#DBEFFA]">
                     <div class="lg:w-1/2 text-center items-center lg:items-start lg:text-start flex flex-col gap-y-6 lg:gap-y-8">
                         <h1 class="text-4xl leading-snug lg:text-5xl lg:leading-snug font-bold text-slate-800">
-                            Entrust your smile to professional
+                            Entrust your smile to the true dental experts
                         </h1>
-                        <p class="text-slate-800/70 font-medium text-base lg:text-lg w-[90%]">Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</p>
-                        <a class="h-12 w-44 bg-primary text-white text-sm font-bold text-center leading-[3rem] rounded-xl transition-colors hover:bg-indigo-800" href="#">Book appointment</a>
+                        <p class="text-slate-800/70 font-medium text-base lg:text-lg w-[90%]">Experience state-of-the-art, painless dental treatments in Pune. From advanced implants to custom teeth alignment and cosmetic dentistry, we deliver care designed around your comfort.</p>
+                        <a class="h-12 w-44 bg-primary text-white text-sm font-bold text-center leading-[3rem] rounded-xl transition-colors hover:bg-indigo-800" href="https://wa.me/919699577641?text=Hi%2C%20I%20would%20like%20to%20book%20an%20appointment%20at%20Dentalist%20Smile%20Dental%20Clinic." target="_blank" rel="noopener noreferrer">Book appointment</a>
                     </div>
                     <div class="lg:w-1/2 mt-auto">
                         <img class="" src="./assets/images/top-main.webp" alt="">
@@ -216,7 +279,7 @@
         </section>
         
         <!-- Services Section -->
-        <section class="section mb-32">
+        <section class="section mb-32" id="services">
             <div class="container">
                 <div class="flex flex-col gap-14 lg:gap-y-16 xl:gap-y-20">
                     <!-- Services info contents -->
@@ -229,46 +292,46 @@
                             <p class="text-slate-800 text-3xl xs:text-4xl lg:max-w-[340px] leading-snug xs:leading-snug font-bold">Feel amazing about your oral health</p>
                         </div>
                         <!-- Right Side -->
-                        <p class="text-center lg:text-start lg:max-w-screen-xs text-[15px] font-medium text-slate-800/70 -mb-8">Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</p>
+                        <p class="text-center lg:text-start lg:max-w-screen-xs text-[15px] font-medium text-slate-800/70 -mb-8">We combine clinical expertise with advanced technology to deliver gentle, customized dental care for patients of all ages.</p>
                     </div>
                     <!-- Services -->
                     <div class="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-4 gap-5 child:transition-all child-hover:shadow-2xl mt-6 lg:mt-0 child-hover:shadow-slate-400/20 child-hover:border-gray-100 child:cursor-pointer">
                         <!-- Service item -->
                         <div class="services-item rounded-[32px] border p-4 flex flex-col gap-y-4">
-                            <img class="w-full rounded-[32px]" src="./assets/images/dentures.webp" alt="">
+                            <img class="w-full rounded-[32px] h-[220px] object-cover" src="./assets/images/service-dentures.jpg" alt="Dentures">
                             <div class="text-center space-y-2">
                                 <h3 class="text-slate-800 font-bold">Dentures</h3>
-                                <p class="text-[15px] font-medium text-slate-800/50">Lorem ipsum is placeholder text commonly used in the graphic,</p>
+                                <p class="text-[15px] font-medium text-slate-800/50">Natural-looking complete and partial dentures designed to restore your comfortable chewing and smile.</p>
                             </div>
                         </div>
                         <!-- Service item -->
                         <div class="services-item rounded-[32px] border p-4 flex flex-col gap-y-4">
-                            <img class="w-full rounded-[32px]" src="./assets/images/implants.webp" alt="">
+                            <img class="w-full rounded-[32px] h-[220px] object-cover" src="./assets/images/service-implants.jpg" alt="Implants">
                             <div class="text-center space-y-2">
                                 <h3 class="text-slate-800 font-bold">Implants</h3>
-                                <p class="text-[15px] font-medium text-slate-800/50">Lorem ipsum is placeholder text commonly used in the graphic,</p>
+                                <p class="text-[15px] font-medium text-slate-800/50">Stable, permanent replacements for missing teeth using premium implants that function like natural roots.</p>
                             </div>
                         </div>
                         <!-- Service item -->
                         <div class="services-item rounded-[32px] border p-4 flex flex-col gap-y-4">
-                            <img class="w-full rounded-[32px]" src="./assets/images/whiting.webp" alt="">
+                            <img class="w-full rounded-[32px] h-[220px] object-cover" src="./assets/images/service-whitening.jpg" alt="Whitening">
                             <div class="text-center space-y-2">
                                 <h3 class="text-slate-800 font-bold">Whitening</h3>
-                                <p class="text-[15px] font-medium text-slate-800/50">Lorem ipsum is placeholder text commonly used in the graphic,</p>
+                                <p class="text-[15px] font-medium text-slate-800/50">Safe, advanced whitening procedures that quickly erase deep stains and restore brilliant brightness.</p>
                             </div>
                         </div>
                         <!-- Service item --> 
                         <div class="services-item rounded-[32px] border p-4 flex flex-col gap-y-4">
-                            <img class="w-full rounded-[32px]" src="./assets/images/rootcanal.webp" alt="">
+                            <img class="w-full rounded-[32px] h-[220px] object-cover" src="./assets/images/service-rootcanal.jpg" alt="Root Canal">
                             <div class="text-center space-y-2">
                                 <h3 class="text-slate-800 font-bold">Root Canal</h3>
-                                <p class="text-[15px] font-medium text-slate-800/50">Lorem ipsum is placeholder text commonly used in the graphic,</p>
+                                <p class="text-[15px] font-medium text-slate-800/50">Gentle and precise root canal therapy to save damaged teeth and relieve chronic pain effectively.</p>
                             </div>
                         </div>
                     </div>
                     <!-- More Service Call to Action Button -->
                     <div class="services-more transition-all">
-                        <a href="#" class="w-max mx-auto flex items-center gap-x-1 p-3 rounded-xl text-sm font-bold text-primary bg-primary/10 transition-colors hover:bg-primary/20">
+                        <a href="https://wa.me/919699577641?text=Hi%2C%20I%20would%20like%20to%20know%20more%20about%20your%20services." target="_blank" rel="noopener noreferrer" class="w-max mx-auto flex items-center gap-x-1 p-3 rounded-xl text-sm font-bold text-primary bg-primary/10 transition-colors hover:bg-primary/20">
                             View all service list
                             <svg class="w-5 h-5">
                                 <use href="#arrow-right-circle"></use>
@@ -291,20 +354,20 @@
                     <!-- Emergency Contents -->
                     <div class="flex flex-col gap-y-4 text-center lg:text-start">
                         <!-- Title -->
-                        <h4 class="text-sm text-primary font-bold">Dental 24H Emergency</h4>
+                        <h4 class="text-sm text-primary font-bold">Dental Care Helpline</h4>
                         <!-- Subtitle -->
-                        <p class="text-slate-800 text-4xl leading-snug font-bold sm:max-w-screen-sm">friendly treatment from our locally practice.</p>
+                        <p class="text-slate-800 text-4xl leading-snug font-bold sm:max-w-screen-sm">Gentle, painless treatment from your trusted local practice.</p>
                         <!-- Description --> 
-                        <p class="max-w-lg lg:max-w-md mx-auto lg:mx-0 text-[15px] font-medium text-slate-800/70">Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</p>
+                        <p class="max-w-lg lg:max-w-md mx-auto lg:mx-0 text-[15px] font-medium text-slate-800/70">We offer round-the-clock emergency support for toothaches, dental trauma, fractures, and acute pain. Get immediate care when you need it most.</p>
                         <!-- Button Call to Action -->
-                        <a class="h-12 w-44 mx-auto bg-primary text-white text-sm font-bold text-center leading-[3rem] mt-6 lg:mt-8 lg:mx-0 rounded-xl transition-colors hover:bg-indigo-800" href="#">Book appointment</a>
+                        <a class="h-12 w-44 mx-auto bg-primary text-white text-sm font-bold text-center leading-[3rem] mt-6 lg:mt-8 lg:mx-0 rounded-xl transition-colors hover:bg-indigo-800" href="https://wa.me/919699577641?text=Hi%2C%20I%20have%20a%20dental%20emergency%20and%20need%20to%20book%20an%20appointment." target="_blank" rel="noopener noreferrer">Book appointment</a>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Features Section -->
-        <section class="section py-16">
+        <section class="section py-16" id="features">
             <div class="container">
                 <!-- p-8 md:px-20 md:py-16 lg:px-60 lg:py-20 -->
                 <!-- Feature Container -->
@@ -316,7 +379,7 @@
                         <!-- Subtitle -->
                         <p class="text-slate-800 text-4xl leading-snug font-bold">Specialized care through experience</p>
                         <!-- Description -->
-                        <p class="text-[15px] font-medium text-slate-800/50">Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</p>
+                        <p class="text-[15px] font-medium text-slate-800/50">We provide modern, comfort-first treatments tailored to Pune families, leveraging advanced diagnostics and decades of clinical excellence.</p>
                     </div>
                     <!-- Features -->
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-14">
@@ -331,7 +394,7 @@
                                 <!-- Feature item title -->
                                 <p class="text-slate-800 font-bold mb-1">Safety first</p>
                                 <!-- Feature item Description -->
-                                <p class="text-sm font-medium text-slate-800/50">Lorem ipsum is placeholder text commonly used in the graphic ...</p>
+                                <p class="text-sm font-medium text-slate-800/50">Strict sterilization protocols and touchless hygiene measures to ensure a sterile clinical environment.</p>
                             </div>
                         </div>
                         <!-- Feature item -->
@@ -345,7 +408,7 @@
                                 <!-- Feature item title -->
                                 <p class="text-slate-800 font-bold mb-1">Insurance accepted</p>
                                 <!-- Feature item Description -->
-                                <p class="text-sm font-medium text-slate-800/50">Lorem ipsum is placeholder text commonly used in the graphic ...</p>
+                                <p class="text-sm font-medium text-slate-800/50">Hassle-free insurance claims and transparent cost estimations for all treatments.</p>
                             </div>
                         </div>
                         <!-- Feature item -->
@@ -359,7 +422,7 @@
                                 <!-- Feature item title -->
                                 <p class="text-slate-800 font-bold mb-1">Full-service dentistry</p>
                                 <!-- Feature item Description -->
-                                <p class="text-sm font-medium text-slate-800/50">Lorem ipsum is placeholder text commonly used in the graphic ...</p>
+                                <p class="text-sm font-medium text-slate-800/50">From routine scaling to advanced cosmetic surgeries and smile makeovers under one roof.</p>
                             </div>
                         </div>
                         <!-- Feature item -->
@@ -373,7 +436,7 @@
                                 <!-- Feature item title -->
                                 <p class="text-slate-800 font-bold mb-1">No judgment ever</p>
                                 <!-- Feature item Description -->
-                                <p class="text-sm font-medium text-slate-800/50">Lorem ipsum is placeholder text commonly used in the graphic ...</p>
+                                <p class="text-sm font-medium text-slate-800/50">We cater to dental anxieties with compassionate care, providing custom sedation options.</p>
                             </div>
                         </div>
                     </div>
@@ -392,7 +455,7 @@
                         <!-- Subtitle -->
                         <p class="text-slate-800 text-4xl leading-snug font-bold sm:max-w-screen-sm">First class dentistry, from top dentists.</p>
                         <!-- Description -->
-                        <p class="max-w-lg lg:max-w-md mx-auto lg:mx-0 text-[15px] font-medium text-slate-800/70">Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts</p>
+                        <p class="max-w-lg lg:max-w-md mx-auto lg:mx-0 text-[15px] font-medium text-slate-800/70">Our team of highly-qualified specialists brings years of clinical expertise to every treatment, ensuring you receive world-class dental care right here in Pune.</p>
                         <div class="flex flex-col gap-y-2 child:text-[#181945] child:text-[15px] child:font-medium mt-4">
                             <p class="flex items-center gap-x-2">
                                 <svg class="w-5 h-5 text-primary">
@@ -424,7 +487,7 @@
         </section>
 
         <!-- TESTIMONIAL Section  -->
-        <section class="section py-16">
+        <section class="section py-16" id="testimonials">
             <div class="container">
                 <div class="bg-[#D9EBFA] rounded-3xl p-10 md:px-16 md:py-[3.5rem] lg:py-20 xl:py-24">
                     <!-- TESTIMONIAL info contents -->
@@ -437,7 +500,7 @@
                             <p class="text-slate-800 text-3xl xs:text-4xl lg:max-w-[400px] leading-snug xs:leading-snug font-bold">What people have said about us</p>
                         </div>
                         <!-- Right Side -->
-                        <p class="text-center lg:text-start lg:max-w-sm text-[15px] font-medium text-slate-800/70 -mb-8">Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts</p>
+                        <p class="text-center lg:text-start lg:max-w-sm text-[15px] font-medium text-slate-800/70 -mb-8">Read what our valued patients have to say about their painless and comfortable treatment experiences at our clinic.</p>
                     </div>
                     <!-- User TESTIMONIAL -->
                     <div class="swiper swiper-1">
@@ -450,9 +513,9 @@
                                 </div>
                                 <div class="text-center mt-8">
                                     <!-- User Name -->
-                                    <p class="font-bold text-slate-800 mb-2">Robert Fox</p>
+                                    <p class="font-bold text-slate-800 mb-2">Amit Sharma</p>
                                     <!-- User Comment -->
-                                    <p class="text-[15px] font-medium text-slate-800/70">Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts</p>
+                                    <p class="text-[15px] font-medium text-slate-800/70">The root canal treatment here was completely painless. Dr. Sharma and his team made me feel extremely comfortable at every step!</p>
                                     <div class="flex items-center justify-center mt-6">
                                         <svg class="w-5 h-5 text-orange-star">
                                             <use href="#star"></use>
@@ -480,9 +543,9 @@
                                 </div>
                                 <div class="text-center mt-8">
                                     <!-- User Name -->
-                                    <p class="font-bold text-slate-800 mb-2">Albert Flores</p>
+                                    <p class="font-bold text-slate-800 mb-2">Neha Patil</p>
                                     <!-- User Comment -->
-                                    <p class="text-[15px] font-medium text-slate-800/70">Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts</p>
+                                    <p class="text-[15px] font-medium text-slate-800/70">I got my teeth whitened here before my wedding and the results were absolutely stunning. The dental team is incredibly professional and caring.</p>
                                     <div class="flex items-center justify-center mt-6">
                                         <svg class="w-5 h-5 text-orange-star">
                                             <use href="#star"></use>
@@ -510,9 +573,9 @@
                                 </div>
                                 <div class="text-center mt-8">
                                     <!-- User Name -->
-                                    <p class="font-bold text-slate-800 mb-2">Bessie Cooper</p>
+                                    <p class="font-bold text-slate-800 mb-2">Rajesh Shah</p>
                                     <!-- User Comment -->
-                                    <p class="text-[15px] font-medium text-slate-800/70">Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts</p>
+                                    <p class="text-[15px] font-medium text-slate-800/70">Excellent dental implants service! The state-of-the-art facilities and precise guidance made my treatment exceptionally smooth.</p>
                                     <div class="flex items-center justify-center mt-6">
                                         <svg class="w-5 h-5 text-orange-star">
                                             <use href="#star"></use>
@@ -540,9 +603,9 @@
                                 </div>
                                 <div class="text-center mt-8">
                                     <!-- User Name -->
-                                    <p class="font-bold text-slate-800 mb-2">David Martin</p>
+                                    <p class="font-bold text-slate-800 mb-2">Priya Deshmukh</p>
                                     <!-- User Comment -->
-                                    <p class="text-[15px] font-medium text-slate-800/70">Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts</p>
+                                    <p class="text-[15px] font-medium text-slate-800/70">Very clean clinic with a friendly, welcoming staff. They are extremely patient with children, making family dental visits stress-free.</p>
                                     <div class="flex items-center justify-center mt-6">
                                         <svg class="w-5 h-5 text-orange-star">
                                             <use href="#star"></use>
@@ -570,7 +633,7 @@
         </section>
 
         <!-- Blog Post Section -->
-        <section class="section py-16">
+        <section class="section py-16" id="blog">
             <div class="container">
                 <!-- Blog Post info -->
                 <div class="text-center flex flex-col gap-y-4 mb-14 md:mb-16">
@@ -602,7 +665,7 @@
                                 <!-- Post Title -->
                                 <h4 class="font-bold text-slate-800"><a href="#">New Technology Make for Dental Operation</a></h4>
                                 <!-- Post Excerption -->
-                                <p class="line-clamp-2 text-[15px] font-medium text-slate-800/70">Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing</p>
+                                <p class="line-clamp-2 text-[15px] font-medium text-slate-800/70">Discover how modern digital scanners and laser tech are revolutionizing pain-free dental surgery.</p>
                             </div>
                         </div>
                         <!-- Post item -->
@@ -625,7 +688,7 @@
                                 <!-- Post Title -->
                                 <h4 class="font-bold text-slate-800"><a href="#">Regular Dental care make Your Smile Brighter</a></h4>
                                 <!-- Post Excerption -->
-                                <p class="line-clamp-2 text-[15px] font-medium text-slate-800/70">Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing</p>
+                                <p class="line-clamp-2 text-[15px] font-medium text-slate-800/70">Simple, effective habits to keep your gums healthy and your natural teeth strong for life.</p>
                             </div>
                         </div>
                         <!-- Post item -->
@@ -648,7 +711,7 @@
                                 <!-- Post Title -->
                                 <h4 class="font-bold text-slate-800"><a href="#">Dental Hygiene for All Age to Make Smile</a></h4>
                                 <!-- Post Excerption -->
-                                <p class="line-clamp-2 text-[15px] font-medium text-slate-800/70">Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing</p>
+                                <p class="line-clamp-2 text-[15px] font-medium text-slate-800/70">A complete guide to oral hygiene practices recommended by top dentists for all age groups.</p>
                             </div>
                         </div>
                         <!-- Post item -->
@@ -671,7 +734,7 @@
                                 <!-- Post Title -->
                                 <h4 class="font-bold text-slate-800"><a href="#">Home and Natural Remedies for Toothache</a></h4>
                                 <!-- Post Excerption -->
-                                <p class="line-clamp-2 text-[15px] font-medium text-slate-800/70">Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing</p>
+                                <p class="line-clamp-2 text-[15px] font-medium text-slate-800/70">Proven home methods to manage dental pain and swelling before you reach the clinic.</p>
                             </div>
                         </div>
                         <!-- Post item -->
@@ -694,7 +757,7 @@
                                 <!-- Post Title -->
                                 <h4 class="font-bold text-slate-800"><a href="#">How to Choose the Right Toothbrush for You</a></h4>
                                 <!-- Post Excerption -->
-                                <p class="line-clamp-2 text-[15px] font-medium text-slate-800/70">Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing</p>
+                                <p class="line-clamp-2 text-[15px] font-medium text-slate-800/70">Factors to consider when choosing your next toothbrush for proper plaque control.</p>
                             </div>
                         </div>
                     </div>
@@ -704,12 +767,12 @@
         </section>
 
         <!-- Contact us Section -->
-        <section class="section py-16">
+        <section class="section py-16" id="contact">
             <div class="container">
                 <div class="flex flex-col lg:flex-row gap-y-6 gap-x-20">
                     <!-- Map image -->
                     <div class="relative lg:w-1/2">
-                        <img class="block w-full h-[440px] xs:h-[500px] lg:h-[610px] xl:h-[680px] object-cover rounded-3xl" src="./assets/images/map-image.webp" alt="map-image">
+                        <iframe title="Location Map" class="block w-full h-[440px] xs:h-[500px] lg:h-[610px] xl:h-[680px] object-cover rounded-3xl border-0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.381183182855!2d73.803123!3d18.560199!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bf3095555555%3A0x868b444747124f0!2sITI%20Road%2C%20Aundh%2C%20Pune%2C%20Maharashtra%20411007!5e0!3m2!1sen!2sin!4v1717596000000!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         <!-- Absolute Address -->
                         <div class="absolute bg-white p-4 bottom-8 left-8 right-8 rounded-3xl flex gap-x-6 items-center">
                             <!-- icon -->
@@ -717,7 +780,7 @@
                             <!-- Address -->
                             <div>
                                 <p class="text-xs text-primary font-bold mb-1">ADDRESS</p>
-                                <p class="font-bold text-slate-800 max-w-[260px]">Place to write an address</p>
+                                <p class="font-bold text-slate-800 max-w-[260px]">123, ITI Road, Near Bata Showroom, Aundh, Pune - 411007</p>
                             </div>
                         </div>
                     </div>
@@ -728,7 +791,7 @@
                             <!-- Subtitle -->
                             <p class="text-slate-800 text-4xl leading-snug font-bold lg:max-w-screen-sm">Care at Dentalist is pleasure</p>
                             <!-- Description -->
-                            <p class="mx-auto lg:mx-0 text-[15px] font-medium text-slate-800/70">Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual</p>
+                            <p class="mx-auto lg:mx-0 text-[15px] font-medium text-slate-800/70">Schedule a personalized consult with our dental experts. Fill out the form or reach us instantly on WhatsApp.</p>
                         </div>
                         <!-- Contact us form -->
                         <form class="grid grid-cols-1 sm:grid-cols-2 gap-x-5 gap-y-7 mt-10 xl:mt-16">
@@ -762,8 +825,8 @@
                                 <div class="hidden sm:flex items-center gap-x-4">
                                     <img class="block w-16 h-16" src="./assets/images/phone-icon.png" alt="phone-icon.png">
                                     <div>
-                                        <p class="text-primary font-bold text-sm">Dental 24H Emergency</p>
-                                        <p class="text-slate-800 font-bold mt-1">01234567890</p>
+                                        <p class="text-primary font-bold text-sm">Dental Care Helpline</p>
+                                        <p class="text-slate-800 font-bold mt-1">+91 96995 77641</p>
                                     </div>
                                 </div>
                                 <!-- Submit button -->
@@ -784,23 +847,23 @@
                     <!-- Logo -->
                     <img src="./assets/images/logo-footer.svg" alt="logo-footer">
                     <!-- Description -->
-                    <p class="text-[15px] text-white/70  mt-4">Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups....</p>
+                    <p class="text-[15px] text-white/70  mt-4">Dentalist - Smile Dental Clinic provides family-first, advanced dental care. Located in Aundh, Pune, we specialize in painless surgeries, root canal therapy, alignments, and implants.</p>
                     <!-- Social in footer -->
                     <div class="mt-8">
-                        <p class="text-[13px] font-medium text-white/70 mb-4">FALLOW US ON</p>
+                        <p class="text-[13px] font-medium text-white/70 mb-4">FOLLOW US ON</p>
                         <!-- Socials -->
                         <div class="flex items-center gap-x-4 child:transition-colors child:bg-white/90 child-hover:bg-white child:p-2 child:rounded-lg">
                             <!-- Social item -->
-                            <a href="#">
+                            <a href="https://www.facebook.com/yourclinic" target="_blank" rel="noopener noreferrer">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#1e293b" d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.326-.043-1.557-.14-2.857-.14C11.928 2 10 3.657 10 6.7v2.8H7v4h3V22h4z"/></svg>
+                            </a>
+                            <!-- Social item -->
+                            <a href="https://www.instagram.com/yourclinic" target="_blank" rel="noopener noreferrer">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#1e293b" d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4zm9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3"/></svg>
                             </a>
                             <!-- Social item -->
-                            <a href="#">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#1e293b" d="M6.94 5a2 2 0 1 1-4-.002a2 2 0 0 1 4 .002M7 8.48H3V21h4zm6.32 0H9.34V21h3.94v-6.57c0-3.66 4.77-4 4.77 0V21H22v-7.93c0-6.17-7.06-5.94-8.72-2.91z"/></svg>
-                            </a>
-                             <!-- Social item -->
-                             <a href="#">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#1e293b" d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.326-.043-1.557-.14-2.857-.14C11.928 2 10 3.657 10 6.7v2.8H7v4h3V22h4z"/></svg>
+                            <a href="https://twitter.com/yourclinic" target="_blank" rel="noopener noreferrer">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#1e293b" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
                             </a>
                         </div>
                     </div>
@@ -813,23 +876,23 @@
                     <ul class="flex flex-col gap-y-4 text-[15px]">
                         <!-- Quick Access item -->
                         <li>
-                            <a class="quick-access-item" href="#">About Us</a>
+                            <a class="quick-access-item" href="#home">Home</a>
                         </li>
                         <!-- Quick Access item -->
                         <li>
-                            <a class="quick-access-item" href="#">Dental Services</a>
+                            <a class="quick-access-item" href="#services">Dental Services</a>
                         </li>
                         <!-- Quick Access item -->
                         <li>
-                            <a class="quick-access-item" href="#">Dentist</a>
+                            <a class="quick-access-item" href="#features">Features</a>
                         </li>
                         <!-- Quick Access item -->
                         <li>
-                            <a class="quick-access-item" href="#">Blog</a>
+                            <a class="quick-access-item" href="#testimonials">Testimonials</a>
                         </li>
                         <!-- Quick Access item -->
                         <li>
-                            <a class="quick-access-item" href="#">FAQs</a>
+                            <a class="quick-access-item" href="#blog">Blog</a>
                         </li>
                     </ul>
                 </div>
@@ -846,7 +909,7 @@
                             <!-- info contents -->
                             <div>
                                 <p class="text-[14px] font-medium text-white/70 mb-1">Phone Number</p>
-                                <p class="font-bold">01234567890</p>
+                                <p class="font-bold">+91 96995 77641</p>
                             </div>
                         </div>
                         <!-- Contact info item -->
@@ -856,7 +919,7 @@
                             <!-- info contents -->
                             <div>
                                 <p class="text-[14px] font-medium text-white/70 mb-1">Open Hour</p>
-                                <p class="font-bold">09:00 AM - 18:00 PM</p>
+                                <p class="font-bold">10:00 AM - 08:00 PM</p>
                             </div>
                         </div>
                         <!-- Contact info item -->
@@ -866,7 +929,7 @@
                             <!-- info contents -->
                             <div>
                                 <p class="text-[14px] font-medium text-white/70 mb-1">Clinic Address</p>
-                                <p class="font-bold">Place to write an address</p>
+                                <p class="font-bold">123, ITI Road, Near Bata Showroom, Aundh, Pune - 411007</p>
                             </div>
                         </div>
                     </div>

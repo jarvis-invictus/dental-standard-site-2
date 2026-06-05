@@ -132,9 +132,12 @@ sections.forEach(function(param) {
 });
 
 
-// <a> Element PreventDefault
+// <a> Element PreventDefault for placeholders
 aElement.forEach(function(item){
     item.addEventListener("click", function(e){
-        e.preventDefault();
+        const href = item.getAttribute("href");
+        if (href === "#" || !href) {
+            e.preventDefault();
+        }
     });
 });
