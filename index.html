@@ -699,13 +699,17 @@
                         </div>
                     </div>
                      <!-- Expert Doctor image -->
-                     <div class="flex order-first lg:order-last justify-center lg:justify-end w-full lg:w-1/2 relative lg:pr-10 lg:pt-10">
-                        <!-- Light blue background frame -->
-                        <div class="absolute top-0 right-0 w-[85%] h-[95%] rounded-[40px] z-0" style="background-color: #E2F0F9;"></div>
-                        <!-- Floating Image -->
-                        <div class="relative z-10 transition-transform duration-700 hover:-translate-y-2" style="max-width: 320px; width: 100%; animation: float 6s ease-in-out infinite 1s;">
-                            <img class="hidden lg:block rounded-3xl object-cover w-full h-auto shadow-2xl" src="./assets/images/expert-in-dental-desktop.webp" alt="expert-in-dental-desktop.png">
-                            <img class="lg:hidden rounded-3xl object-cover w-full h-auto shadow-2xl" src="./assets/images/expert-in-dental-mobile.webp" alt="expert-in-dental-mobile.png">
+                     <div class="flex order-first lg:order-last justify-center lg:justify-end w-full">
+                        <!-- Wrapper sized to image -->
+                        <div class="relative" style="max-width: 360px; width: 100%;">
+                            <!-- Light blue background frame -->
+                            <div class="absolute rounded-[40px] z-0" style="background-color: #E2F0F9; top: -20px; left: -20px; width: calc(100% + 20px); height: calc(100% + 20px);"></div>
+                            
+                            <!-- Floating Image -->
+                            <div class="relative z-10 w-full h-auto transition-transform duration-700 hover:-translate-y-2" style="animation: float 6s ease-in-out infinite 1s;">
+                                <img class="hidden lg:block rounded-3xl object-cover w-full h-auto shadow-2xl" src="./assets/images/expert-in-dental-desktop.webp" alt="expert-in-dental-desktop.png">
+                                <img class="lg:hidden rounded-3xl object-cover w-full h-auto shadow-2xl" src="./assets/images/expert-in-dental-mobile.webp" alt="expert-in-dental-mobile.png">
+                            </div>
                         </div>
                     </div>
                 </div>
