@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="robots" content="index, follow">
     <meta name="description" content="Experience premium dental care at Dentalist - Smile Dental Clinic, Pune. Specialized in root canals, teeth alignment, implants, and teeth whitening in Aundh. Book an appointment today!">
-    <meta name="keywords" content="dentist Pune, dental clinic Aundh, root canal Pune, teeth alignment Pune, dental implants Pune, teeth whitening Aundh, Dentalist Pune">
+
     <link rel="canonical" href="https://smiledentalclinic.in/">
     <meta property="og:title" content="Dentalist - Premium Smile Dental Clinic in Aundh, Pune">
     <meta property="og:description" content="Experience premium dental care at Dentalist - Smile Dental Clinic, Pune. Specialized in root canals, teeth alignment, implants, and teeth whitening in Aundh. Book an appointment today!">
@@ -16,43 +16,33 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        /* Audit Fix #10: Google Font + Global Apply */
         body, html { font-family: 'Figtree', sans-serif; }
-
-        /* Audit Fix #1: Smooth scroll */
         html { scroll-behavior: smooth; }
 
-        /* Float animation for doctor image */
         @keyframes float {
             0% { transform: translateY(0px); }
             50% { transform: translateY(-15px); }
             100% { transform: translateY(0px); }
         }
 
-        /* Audit Fix #2: Nav active state */
         nav a.nav-active {
             color: #4F46E5 !important;
             border-bottom: 2px solid #4F46E5;
             padding-bottom: 2px;
         }
 
-        /* Audit Fix #5: Modal is already animated (scale+fade) — verified ✅ */
-
-        /* Audit Fix #9: Star ratings — make them bigger and gold */
         .text-orange-star {
             color: #F59E0B !important;
             width: 20px !important;
             height: 20px !important;
         }
 
-        /* Audit Fix #8: Feature icons — consistent size */
         .feature-icon-img {
             width: 56px;
             height: 56px;
             object-fit: contain;
         }
 
-        /* Audit Fix #11: Contact form validation */
         .form-input.input-error {
             border-color: #EF4444 !important;
             box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.15) !important;
@@ -67,20 +57,18 @@
         .form-error-msg.visible {
             display: block;
         }
+
+        .swiper-pagination-bullet-active {
+            background-color: #583FBC !important;
+            width: 16px;
+            border-radius: 10px;
+            transition: all 0.5s ease-in-out;
+        }
     </style>
     <title>Dentalist - Premium Smile Dental Clinic in Aundh, Pune</title>
-    <!-- Stylesheet -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="./styles/main.css" type="text/css">
     <link rel="icon" href="./assets/images/favicon.png" type="images/png">
-    <style>
-        .swiper-pagination-bullet-active {
-        background-color: #583FBC !important;
-        width: 16px;
-        border-radius: 10px;
-        transition: all 0.5s ease-in-out;
-        }
-    </style>
     <!-- Scripts -->
     <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script defer src="./scripts/main.js"></script>
@@ -126,11 +114,7 @@
           "closes": "20:00"
         }
       ],
-      "sameAs": [
-        "https://www.facebook.com/yourclinic",
-        "https://www.instagram.com/yourclinic",
-        "https://twitter.com/yourclinic"
-      ],
+      "sameAs": [],
       "knowsAbout": [
         "Dentures",
         "Implants",
@@ -321,31 +305,7 @@
                     <div class="lg:w-1/2 mt-auto relative" id="hero-img-wrapper">
                         <img class="" src="./assets/images/top-main.webp" alt="">
 
-                        <!-- TEMP: Coordinate Helper — click anywhere on the image to get coords -->
-                        <div id="coord-helper" style="
-                            position: absolute; inset: 0; z-index: 20; cursor: crosshair;
-                        " onclick="
-                            const rect = this.parentElement.getBoundingClientRect();
-                            const x = event.clientX - rect.left;
-                            const y = event.clientY - rect.top;
-                            const w = rect.width;
-                            const h = rect.height;
-                            const leftPct = ((x / w) * 100).toFixed(1);
-                            const bottomPct = (((h - y) / h) * 100).toFixed(1);
-                            document.getElementById('coord-display').textContent =
-                                'left: ' + x.toFixed(0) + 'px (' + leftPct + '%)  |  bottom: ' + (h-y).toFixed(0) + 'px (' + bottomPct + '%)  |  div size: ' + w.toFixed(0) + 'x' + h.toFixed(0) + 'px';
-                            document.getElementById('coord-box').style.display = 'block';
-                        "></div>
 
-                        <!-- Coord display box -->
-                        <div id="coord-box" style="
-                            display: none; position: absolute; top: 8px; left: 8px;
-                            background: #1e293b; color: #fff; font-size: 12px; font-family: monospace;
-                            padding: 8px 12px; border-radius: 8px; z-index: 30; white-space: nowrap;
-                        ">
-                            <span id="coord-display"></span>
-                            <span onclick="document.getElementById('coord-box').style.display='none'" style="margin-left:12px; cursor:pointer; opacity:0.6;">✕</span>
-                        </div>
 
                         <!-- Overlay card — EXACT COORDS v2:
                              left: 157px (26.5%) | bottom: 108px (18.9%) | div: 592x571px
@@ -736,8 +696,8 @@
                         <!-- Feature item -->
                         <div class="flex items-center flex-col xs:flex-row sm:flex-col lg:flex-row gap-4">
                             <!-- Feature image -->
-                            <div class="w-16 h-16 shrink-0">
-                                <img src="./assets/images/Safety-first.png" alt="Safety-first">
+                            <div class="w-14 h-14 shrink-0">
+                                <img src="./assets/images/Safety-first.png" alt="Safety-first" class="feature-icon-img" loading="lazy">
                             </div>
                             <!-- Feature Content -->
                             <div class="text-center xs:text-start sm:text-center lg:text-start">
@@ -750,8 +710,8 @@
                         <!-- Feature item -->
                         <div class="flex items-center flex-col xs:flex-row sm:flex-col lg:flex-row gap-4">
                             <!-- Feature image -->
-                            <div class="w-16 h-16 shrink-0">
-                                <img src="./assets/images/Insurance-accepted.png" alt="Insurance-accepted">
+                            <div class="w-14 h-14 shrink-0">
+                                <img src="./assets/images/Insurance-accepted.png" alt="Insurance-accepted" class="feature-icon-img" loading="lazy">
                             </div>
                             <!-- Feature Content -->
                             <div class="text-center xs:text-start sm:text-center lg:text-start">
@@ -764,8 +724,8 @@
                         <!-- Feature item -->
                         <div class="flex items-center flex-col xs:flex-row sm:flex-col lg:flex-row gap-4">
                             <!-- Feature image -->
-                            <div class="w-16 h-16 shrink-0">
-                                <img src="./assets/images/Fullservice-dentistry.png" alt="Fullservice-dentistry">
+                            <div class="w-14 h-14 shrink-0">
+                                <img src="./assets/images/Fullservice-dentistry.png" alt="Fullservice-dentistry" class="feature-icon-img" loading="lazy">
                             </div>
                             <!-- Feature Content -->
                             <div class="text-center xs:text-start sm:text-center lg:text-start">
@@ -1179,15 +1139,15 @@
                         <!-- Socials -->
                         <div class="flex items-center gap-x-4 child:transition-colors child:bg-white/90 child-hover:bg-white child:p-2 child:rounded-lg">
                             <!-- Social item -->
-                            <a href="https://www.facebook.com/yourclinic" target="_blank" rel="noopener noreferrer">
+                            <a href="#" aria-label="Facebook">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#1e293b" d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.326-.043-1.557-.14-2.857-.14C11.928 2 10 3.657 10 6.7v2.8H7v4h3V22h4z"/></svg>
                             </a>
                             <!-- Social item -->
-                            <a href="https://www.instagram.com/yourclinic" target="_blank" rel="noopener noreferrer">
+                            <a href="#" aria-label="Instagram">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#1e293b" d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4zm9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3"/></svg>
                             </a>
                             <!-- Social item -->
-                            <a href="https://twitter.com/yourclinic" target="_blank" rel="noopener noreferrer">
+                            <a href="#" aria-label="Twitter / X">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#1e293b" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
                             </a>
                         </div>
@@ -1256,6 +1216,15 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+        <!-- Copyright bar -->
+        <div class="border-t border-white/10">
+            <div class="container">
+                <p class="text-white/40 text-sm text-center py-5">
+                    &copy; <span id="copy-year"></span> Dentalist - Smile Dental Clinic, Aundh, Pune. All rights reserved.
+                    <script>document.getElementById('copy-year').textContent = new Date().getFullYear();</script>
+                </p>
             </div>
         </div>
     </footer>

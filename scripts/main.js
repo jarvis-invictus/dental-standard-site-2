@@ -62,7 +62,7 @@ const swiperTestimonial = new Swiper('.swiper-1', {
     },
 });
 
-// Blog section removed — swiper-2 no longer needed
+
 
 
 // Services Fade Animation removed as requested
