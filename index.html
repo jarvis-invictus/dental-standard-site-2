@@ -11,6 +11,13 @@
     <meta property="og:url" content="https://smiledentalclinic.in/">
     <meta property="og:site_name" content="Dentalist - Smile Dental Clinic">
     <meta property="og:type" content="website">
+    <style>
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
     <title>Dentalist - Premium Smile Dental Clinic in Aundh, Pune</title>
     <!-- Stylesheet -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
@@ -561,9 +568,14 @@
             <div class="container">
                 <div class="flex flex-col lg:flex-row items-center gap-x-20 gap-y-12">
                     <!-- Emergency image -->
-                    <div>
-                        <img class="hidden lg:block" src="./assets/images/emergency-desktop.webp" alt="emergency-desktop">
-                        <img class="lg:hidden" src="./assets/images/emergency-mobile.webp" alt="emergency-mobile">
+                    <div class="relative w-full lg:w-1/2 flex justify-center lg:justify-start lg:pl-10 lg:pt-10">
+                        <!-- Light blue background frame -->
+                        <div class="absolute top-0 left-0 w-[85%] h-[95%] rounded-[40px] z-0" style="background-color: #E2F0F9;"></div>
+                        <!-- Floating Image -->
+                        <div class="relative z-10 w-[90%] transition-transform duration-700 hover:-translate-y-2 hover:shadow-xl rounded-3xl overflow-hidden" style="animation: float 6s ease-in-out infinite;">
+                            <img class="hidden lg:block w-full object-cover" src="./assets/images/emergency-desktop.webp" alt="emergency-desktop">
+                            <img class="lg:hidden w-full object-cover" src="./assets/images/emergency-mobile.webp" alt="emergency-mobile">
+                        </div>
                     </div>
                     <!-- Emergency Contents -->
                     <div class="flex flex-col gap-y-4 text-center lg:text-start">
@@ -692,10 +704,13 @@
                         </div>
                     </div>
                      <!-- Expert Doctor image -->
-                     <div class="flex order-first lg:order-last justify-center lg:justify-end w-full">
-                        <div class="relative transition-transform duration-300 hover:scale-105" style="max-width: 280px; width: 100%;">
-                            <img class="hidden lg:block rounded-3xl object-cover w-full h-auto" style="border: 8px solid white; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);" src="./assets/images/expert-in-dental-desktop.webp" alt="expert-in-dental-desktop.png">
-                            <img class="lg:hidden rounded-3xl object-cover w-full h-auto" style="border: 8px solid white; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);" src="./assets/images/expert-in-dental-mobile.webp" alt="expert-in-dental-mobile.png">
+                     <div class="flex order-first lg:order-last justify-center lg:justify-end w-full lg:w-1/2 relative lg:pr-10 lg:pt-10">
+                        <!-- Light blue background frame -->
+                        <div class="absolute top-0 right-0 w-[85%] h-[95%] rounded-[40px] z-0" style="background-color: #E2F0F9;"></div>
+                        <!-- Floating Image -->
+                        <div class="relative z-10 transition-transform duration-700 hover:-translate-y-2" style="max-width: 320px; width: 100%; animation: float 6s ease-in-out infinite 1s;">
+                            <img class="hidden lg:block rounded-3xl object-cover w-full h-auto shadow-2xl" src="./assets/images/expert-in-dental-desktop.webp" alt="expert-in-dental-desktop.png">
+                            <img class="lg:hidden rounded-3xl object-cover w-full h-auto shadow-2xl" src="./assets/images/expert-in-dental-mobile.webp" alt="expert-in-dental-mobile.png">
                         </div>
                     </div>
                 </div>
