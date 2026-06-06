@@ -6,11 +6,29 @@
     <meta name="description" content="Experience premium dental care at Dentalist - Smile Dental Clinic, Pune. Specialized in root canals, teeth alignment, implants, and teeth whitening in Aundh. Book an appointment today!">
 
     <link rel="canonical" href="https://smiledentalclinic.in/">
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml">
     <meta property="og:title" content="Dentalist - Premium Smile Dental Clinic in Aundh, Pune">
     <meta property="og:description" content="Experience premium dental care at Dentalist - Smile Dental Clinic, Pune. Specialized in root canals, teeth alignment, implants, and teeth whitening in Aundh. Book an appointment today!">
     <meta property="og:url" content="https://smiledentalclinic.in/">
     <meta property="og:site_name" content="Dentalist - Smile Dental Clinic">
     <meta property="og:type" content="website">
+    <meta property="og:image" content="https://smiledentalclinic.in/assets/images/top-main.webp">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="en_IN">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Dentalist - Premium Smile Dental Clinic in Aundh, Pune">
+    <meta name="twitter:description" content="Painless dental treatments in Pune. Root canals, implants, teeth whitening, orthodontics & emergency dental care. Book via WhatsApp!">
+    <meta name="twitter:image" content="https://smiledentalclinic.in/assets/images/top-main.webp">
+    <!-- Geo / Local SEO -->
+    <meta name="geo.region" content="IN-MH">
+    <meta name="geo.placename" content="Aundh, Pune, Maharashtra, India">
+    <meta name="geo.position" content="18.5602;73.8031">
+    <meta name="ICBM" content="18.5602, 73.8031">
+    <!-- Theme color for mobile browsers -->
+    <meta name="theme-color" content="#4F46E5">
+
     <!-- Google Font: Figtree (Healthcare / Trust & Authority) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -75,52 +93,162 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Dentist",
-      "@id": "https://smiledentalclinic.in/#dentist",
-      "name": "Dentalist - Smile Dental Clinic",
-      "url": "https://smiledentalclinic.in",
-      "logo": "https://smiledentalclinic.in/assets/images/logo.svg",
-      "image": "https://smiledentalclinic.in/assets/images/top-main.webp",
-      "description": "Premium Dental Care for Your Family's Smile in Aundh, Pune. Painless root canals, teeth alignment, and dental implants by Pune's leading specialists.",
-      "telephone": "+919699577641",
-      "email": "contact@smiledentalclinic.in",
-      "priceRange": "$$",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "123, ITI Road, Near Bata Showroom, Aundh",
-        "addressLocality": "Pune",
-        "addressRegion": "Maharashtra",
-        "postalCode": "411007",
-        "addressCountry": "IN"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": "18.5602",
-        "longitude": "73.8031"
-      },
-      "openingHoursSpecification": [
+      "@graph": [
         {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": [
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Thursday",
-            "Friday",
-            "Saturday",
-            "Sunday"
+          "@type": ["Dentist", "MedicalOrganization", "LocalBusiness"],
+          "@id": "https://smiledentalclinic.in/#dentist",
+          "name": "Dentalist - Smile Dental Clinic",
+          "alternateName": "Dentalist Clinic Aundh",
+          "url": "https://smiledentalclinic.in",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://smiledentalclinic.in/assets/images/logo.svg",
+            "width": 160,
+            "height": 40
+          },
+          "image": "https://smiledentalclinic.in/assets/images/top-main.webp",
+          "description": "Dentalist - Smile Dental Clinic is a premium dental clinic in Aundh, Pune, offering painless root canals, teeth alignment, dental implants, teeth whitening, cosmetic dentistry, kids dentistry, and emergency dental care.",
+          "telephone": "+919699577641",
+          "email": "contact@smiledentalclinic.in",
+          "priceRange": "$$",
+          "currenciesAccepted": "INR",
+          "paymentAccepted": "Cash, Card, UPI",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "123, ITI Road, Near Bata Showroom, Aundh",
+            "addressLocality": "Pune",
+            "addressRegion": "Maharashtra",
+            "postalCode": "411007",
+            "addressCountry": "IN"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "18.5602",
+            "longitude": "73.8031"
+          },
+          "areaServed": [
+            { "@type": "City", "name": "Pune" },
+            { "@type": "AdministrativeArea", "name": "Aundh" },
+            { "@type": "AdministrativeArea", "name": "Baner" },
+            { "@type": "AdministrativeArea", "name": "Wakad" }
           ],
-          "opens": "10:00",
-          "closes": "20:00"
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+919699577641",
+            "contactType": "customer service",
+            "availableLanguage": ["English", "Hindi", "Marathi"],
+            "contactOption": "TollFree"
+          },
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+              "opens": "10:00",
+              "closes": "20:00"
+            }
+          ],
+          "hasMap": "https://maps.google.com/?q=Dentalist+Smile+Dental+Clinic+Aundh+Pune",
+          "medicalSpecialty": [
+            "Dentistry",
+            "Orthodontics",
+            "Endodontics",
+            "Prosthodontics",
+            "Cosmetic Dentistry",
+            "Pediatric Dentistry"
+          ],
+          "knowsAbout": [
+            "Root Canal Treatment",
+            "Dental Implants",
+            "Teeth Whitening",
+            "Orthodontics",
+            "Clear Aligners",
+            "Cosmetic Dentistry",
+            "Pediatric Dentistry",
+            "Emergency Dental Care",
+            "Dental Veneers",
+            "Smile Makeover"
+          ],
+          "sameAs": []
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://smiledentalclinic.in/#website",
+          "url": "https://smiledentalclinic.in",
+          "name": "Dentalist - Smile Dental Clinic",
+          "description": "Premium dental care in Aundh, Pune. Painless root canals, teeth alignment, implants, and smile makeovers.",
+          "publisher": { "@id": "https://smiledentalclinic.in/#dentist" },
+          "inLanguage": "en-IN"
+        },
+        {
+          "@type": "Person",
+          "@id": "https://smiledentalclinic.in/#doctor",
+          "name": "Dr. Rahul Sharma",
+          "jobTitle": "Senior Dental Consultant",
+          "description": "Dr. Rahul Sharma is a senior dental consultant at Dentalist Smile Dental Clinic, Aundh, Pune, specialising in cosmetic dentistry, root canal treatments, and dental implants.",
+          "worksFor": { "@id": "https://smiledentalclinic.in/#dentist" },
+          "knowsAbout": [
+            "Root Canal Treatment",
+            "Dental Implants",
+            "Cosmetic Dentistry",
+            "Orthodontics",
+            "Smile Design"
+          ],
+          "url": "https://smiledentalclinic.in"
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://smiledentalclinic.in/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Is root canal treatment painful?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No. At Dentalist Smile Dental Clinic in Aundh, Pune, root canal treatments are performed under local anaesthesia and are completely painless. Most patients report feeling only mild pressure. The procedure typically takes 1-2 visits and eliminates the severe toothache pain caused by infection."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How much does a dental implant cost in Pune?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Dental implant costs at Dentalist Clinic, Aundh, Pune range based on the brand, complexity, and number of implants required. We offer transparent cost estimations during consultation. Implants are a permanent solution that lasts 15-25 years with proper care."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How long does teeth whitening last?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Professional teeth whitening at our Aundh clinic lasts between 6 months to 2 years, depending on diet and oral hygiene habits. We use advanced whitening systems that are safe, effective, and can lighten teeth by 4-8 shades in a single session."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What is the best age for braces or clear aligners?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Braces or clear aligners can be started from age 12 onwards once permanent teeth have erupted. However, adults of any age can benefit from orthodontic treatment. At Dentalist Clinic, Pune, we offer traditional metal braces, ceramic braces, and Invisalign clear aligners."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Does Dentalist Clinic in Aundh offer emergency dental care?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. Dentalist Smile Dental Clinic provides 24/7 emergency dental support via WhatsApp at +91 96995 77641. We offer same-day emergency appointments for toothaches, broken teeth, dental trauma, and acute pain at our Aundh, Pune clinic."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Are dental treatments safe for children at your clinic?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Absolutely. Our child-friendly dental clinic in Aundh, Pune is specially designed to make visits fun and anxiety-free for children. We offer paediatric dentistry services including fluoride treatments, dental sealants, cavity fillings, and early orthodontic monitoring."
+              }
+            }
+          ]
         }
-      ],
-      "sameAs": [],
-      "knowsAbout": [
-        "Dentures",
-        "Implants",
-        "Teeth Whitening",
-        "Root Canal Therapy",
-        "Dental Consultation"
       ]
     }
     </script>
@@ -303,7 +431,7 @@
                         <a class="h-12 w-44 bg-primary text-white text-sm font-bold text-center leading-[3rem] rounded-xl transition-colors hover:bg-indigo-800" href="https://wa.me/919699577641?text=Hi%2C%20I%20would%20like%20to%20book%20an%20appointment%20at%20Dentalist%20Smile%20Dental%20Clinic." target="_blank" rel="noopener noreferrer">Book appointment</a>
                     </div>
                     <div class="lg:w-1/2 mt-auto relative" id="hero-img-wrapper">
-                        <img class="" src="./assets/images/top-main.webp" alt="">
+                        <img class="" src="./assets/images/top-main.webp" alt="Dr. Rahul Sharma - Senior Dental Consultant at Dentalist Smile Dental Clinic, Aundh, Pune" loading="eager" fetchpriority="high">
 
 
 
@@ -1119,6 +1247,43 @@
                             </div>
                         </form>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section — AEO (Answer Engine Optimization) -->
+        <section class="section py-16 bg-[#f8f9ff]" id="faq">
+            <div class="container">
+                <div class="flex flex-col gap-y-4 text-center mb-12">
+                    <h4 class="text-sm text-primary font-bold">FAQ</h4>
+                    <h2 class="text-slate-800 text-4xl leading-snug font-bold">Frequently Asked Questions</h2>
+                    <p class="text-[15px] font-medium text-slate-800/60 max-w-xl mx-auto">Everything you need to know about dental treatments at our Aundh, Pune clinic.</p>
+                </div>
+                <div class="max-w-3xl mx-auto flex flex-col gap-y-4">
+                    <details class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden group">
+                        <summary class="flex items-center justify-between px-6 py-5 cursor-pointer list-none font-bold text-slate-800 text-[15px] gap-4"><span>Is root canal treatment painful?</span><svg class="w-5 h-5 text-primary shrink-0 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></summary>
+                        <div class="px-6 pb-5 text-[15px] text-slate-700 font-medium leading-relaxed"><p>No. At Dentalist Smile Dental Clinic in Aundh, Pune, root canal treatments are performed under local anaesthesia and are <strong>completely painless</strong>. Most patients report feeling only mild pressure. The procedure typically takes 1-2 visits and eliminates the severe toothache pain caused by infection.</p></div>
+                    </details>
+                    <details class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden group">
+                        <summary class="flex items-center justify-between px-6 py-5 cursor-pointer list-none font-bold text-slate-800 text-[15px] gap-4"><span>How much does a dental implant cost in Pune?</span><svg class="w-5 h-5 text-primary shrink-0 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></summary>
+                        <div class="px-6 pb-5 text-[15px] text-slate-700 font-medium leading-relaxed"><p>Dental implant costs at Dentalist Clinic, Aundh, Pune vary based on the brand, complexity, and number of implants required. We offer <strong>transparent cost estimations</strong> during consultation. Implants are a permanent solution that lasts 15-25 years with proper care.</p></div>
+                    </details>
+                    <details class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden group">
+                        <summary class="flex items-center justify-between px-6 py-5 cursor-pointer list-none font-bold text-slate-800 text-[15px] gap-4"><span>How long does teeth whitening last?</span><svg class="w-5 h-5 text-primary shrink-0 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></summary>
+                        <div class="px-6 pb-5 text-[15px] text-slate-700 font-medium leading-relaxed"><p>Professional teeth whitening at our Aundh clinic lasts between <strong>6 months to 2 years</strong>, depending on diet and oral hygiene. We use advanced whitening systems that can lighten teeth by 4-8 shades in a single session.</p></div>
+                    </details>
+                    <details class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden group">
+                        <summary class="flex items-center justify-between px-6 py-5 cursor-pointer list-none font-bold text-slate-800 text-[15px] gap-4"><span>What is the best age for braces or clear aligners?</span><svg class="w-5 h-5 text-primary shrink-0 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></summary>
+                        <div class="px-6 pb-5 text-[15px] text-slate-700 font-medium leading-relaxed"><p>Braces or clear aligners can be started from <strong>age 12 onwards</strong> once permanent teeth have erupted. Adults of any age can also benefit. At Dentalist Clinic, Pune, we offer metal braces, ceramic braces, and Invisalign clear aligners.</p></div>
+                    </details>
+                    <details class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden group">
+                        <summary class="flex items-center justify-between px-6 py-5 cursor-pointer list-none font-bold text-slate-800 text-[15px] gap-4"><span>Does Dentalist Clinic offer emergency dental care?</span><svg class="w-5 h-5 text-primary shrink-0 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></summary>
+                        <div class="px-6 pb-5 text-[15px] text-slate-700 font-medium leading-relaxed"><p>Yes. We provide <strong>24/7 emergency dental support</strong> via WhatsApp at +91 96995 77641. Same-day emergency appointments are available for toothaches, broken teeth, dental trauma, and acute pain at our Aundh, Pune clinic.</p></div>
+                    </details>
+                    <details class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden group">
+                        <summary class="flex items-center justify-between px-6 py-5 cursor-pointer list-none font-bold text-slate-800 text-[15px] gap-4"><span>Are dental treatments safe for children?</span><svg class="w-5 h-5 text-primary shrink-0 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></summary>
+                        <div class="px-6 pb-5 text-[15px] text-slate-700 font-medium leading-relaxed"><p>Absolutely. Our <strong>child-friendly dental clinic</strong> in Aundh, Pune is designed to make every visit fun and stress-free. We offer fluoride treatments, dental sealants, cavity fillings, and early orthodontic monitoring for children.</p></div>
+                    </details>
                 </div>
             </div>
         </section>

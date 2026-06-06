@@ -1,4 +1,39 @@
+# robots.txt — Dentalist Smile Dental Clinic
+# https://smiledentalclinic.in
+
+# All standard crawlers
 User-agent: *
 Allow: /
 
+# Google
+User-agent: Googlebot
+Allow: /
+
+# Bing
+User-agent: Bingbot
+Allow: /
+
+# AI Crawlers — Allow all for GEO citation eligibility
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: Omgilibot
+Allow: /
+
+# Sitemap location
 Sitemap: https://smiledentalclinic.in/sitemap.xml
