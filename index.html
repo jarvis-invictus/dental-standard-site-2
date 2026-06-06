@@ -698,17 +698,44 @@
                             </p>
                         </div>
                     </div>
-                     <!-- Expert Doctor image -->
-                     <div class="flex order-first lg:order-last justify-center lg:justify-end w-full lg:pr-10 lg:pt-8">
-                        <!-- Wrapper sized to image -->
-                        <div class="relative" style="max-width: 240px; width: 100%;">
-                            <!-- Light blue background frame -->
-                            <div class="absolute rounded-3xl z-0" style="background-color: #E2F0F9; top: -10%; right: -15%; width: 85%; height: 120%;"></div>
-                            
-                            <!-- Floating Image -->
-                            <div class="relative z-10 w-full h-auto transition-transform duration-700 hover:-translate-y-2" style="animation: float 6s ease-in-out infinite 1s;">
-                                <img class="hidden lg:block rounded-2xl object-cover w-full h-auto shadow-xl" src="./assets/images/indian_dentist_doctor_expert.png" alt="Indian Dentist Doctor">
-                                <img class="lg:hidden rounded-2xl object-cover w-full h-auto shadow-xl" src="./assets/images/indian_dentist_doctor_expert.png" alt="Indian Dentist Doctor">
+                     <!-- Expert Doctor image - right-offset frame -->
+                     <div class="flex order-first lg:order-last justify-center lg:justify-end w-full">
+                        <!-- Outer container controlling total width -->
+                        <div style="position: relative; width: 260px; height: 320px; flex-shrink: 0;">
+                            <!-- Blue offset background frame (larger, behind, right-shifted) -->
+                            <div style="
+                                position: absolute;
+                                top: 20px;
+                                right: -24px;
+                                width: 220px;
+                                height: 290px;
+                                background-color: #DBEEFF;
+                                border-radius: 28px;
+                                z-index: 0;
+                            "></div>
+
+                            <!-- Doctor portrait on top, left-offset relative to frame -->
+                            <div style="
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                width: 220px;
+                                height: 290px;
+                                z-index: 1;
+                                animation: float 6s ease-in-out infinite;
+                            ">
+                                <img
+                                    src="./assets/images/indian_doctor_portrait_clean.png"
+                                    alt="Expert Indian Dentist"
+                                    style="
+                                        width: 100%;
+                                        height: 100%;
+                                        object-fit: cover;
+                                        object-position: top center;
+                                        border-radius: 24px;
+                                        box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+                                    "
+                                >
                             </div>
                         </div>
                     </div>
