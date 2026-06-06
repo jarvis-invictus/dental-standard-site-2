@@ -321,28 +321,27 @@
                     <div class="lg:w-1/2 mt-auto relative">
                         <img class="" src="./assets/images/top-main.webp" alt="">
 
-                        <!-- HTML Overlay Card — exact position calculated from 1348x1300px image
-                             Card in image: left ~50px, bottom ~220px, width ~195px, height ~62px
-                             As percentages: left 3.7%, bottom 16.9%, width 14.5%
-                             Avatar in image ~40px → scaled ~20px rendered → bumped to 36px for legibility
+                        <!-- HTML Overlay Card
+                             Position measured from screenshot pixel coords:
+                             Card left edge: 135px into image div (540px wide) = 25%
+                             Card bottom: 133px from div bottom (520px tall) = 20%
+                             Card width: ~185px rendered = 34% → using 37% to guarantee full cover
                         -->
                         <div style="
                             position: absolute;
-                            bottom: 16.9%;
-                            left: 3.7%;
+                            bottom: 20%;
+                            left: 25%;
                             background: #ffffff;
                             border-radius: 12px;
-                            padding: 8px 12px;
+                            padding: 8px 12px 8px 8px;
                             box-shadow: 0 6px 20px rgba(0,0,0,0.13);
                             display: flex;
                             align-items: center;
                             gap: 9px;
-                            width: 14.5%;
-                            min-width: 140px;
+                            width: 37%;
                             z-index: 10;
-                            white-space: nowrap;
                         ">
-                            <!-- Square avatar, rounded corners — matches original card style -->
+                            <!-- Square avatar, rounded corners -->
                             <div style="
                                 width: 36px;
                                 height: 36px;
@@ -358,9 +357,9 @@
                                 >
                             </div>
                             <!-- Name & role -->
-                            <div style="overflow: hidden;">
-                                <p style="font-size: 12px; font-weight: 700; color: #0f172a; margin: 0; line-height: 1.3; white-space: nowrap;">Dr. Rahul Sharma</p>
-                                <p style="font-size: 10px; color: #64748b; font-weight: 500; margin: 0; white-space: nowrap;">Consultant</p>
+                            <div>
+                                <p style="font-size: 12px; font-weight: 700; color: #0f172a; margin: 0; line-height: 1.3;">Dr. Rahul Sharma</p>
+                                <p style="font-size: 10px; color: #64748b; font-weight: 500; margin: 0;">Consultant</p>
                             </div>
                         </div>
                     </div>
