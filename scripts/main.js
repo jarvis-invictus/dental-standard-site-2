@@ -95,3 +95,75 @@ aElement.forEach(function(item){
         }
     });
 });
+
+
+// Audit Fix #2: Nav Active State via IntersectionObserver
+const navSections = document.querySelectorAll("main section[id]");
+const navLinks = document.querySelectorAll("nav a[href^='#']");
+
+const setActiveNav = (id) => {
+    navLinks.forEach(link => {
+        link.classList.remove("nav-active");
+        if (link.getAttribute("href") === `#${id}`) {
+            link.classList.add("nav-active");
+        }
+    });
+};
+
+const navObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            setActiveNav(entry.target.id);
+        }
+    });
+}, { root: null, threshold: 0.3 });
+
+navSections.forEach(section => navObserver.observe(section));
+
+
+// Audit Fix #11: Contact Form Inline Validation
+const contactForm = document.querySelector("form");
+if (contactForm) {
+    const nameInput = document.getElementById("name");
+    const emailInput = document.getElementById("email");
+    const nameError = document.getElementById("name-error");
+    const emailError = document.getElementById("email-error");
+
+    const showError = (input, errorEl) => {
+        input.classList.add("input-error");
+        if (errorEl) errorEl.classList.add("visible");
+    };
+    const clearError = (input, errorEl) => {
+        input.classList.remove("input-error");
+        if (errorEl) errorEl.classList.remove("visible");
+    };
+
+    if (nameInput) {
+        nameInput.addEventListener("blur", () => {
+            nameInput.value.trim().length < 2 ? showError(nameInput, nameError) : clearError(nameInput, nameError);
+        });
+        nameInput.addEventListener("input", () => clearError(nameInput, nameError));
+    }
+    if (emailInput) {
+        emailInput.addEventListener("blur", () => {
+            const valid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailInput.value.trim());
+            valid ? clearError(emailInput, emailError) : showError(emailInput, emailError);
+        });
+        emailInput.addEventListener("input", () => clearError(emailInput, emailError));
+    }
+
+    contactForm.addEventListener("submit", (e) => {
+        let hasError = false;
+        if (nameInput && nameInput.value.trim().length < 2) {
+            showError(nameInput, nameError); hasError = true;
+        }
+        if (emailInput) {
+            const valid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailInput.value.trim());
+            if (!valid) { showError(emailInput, emailError); hasError = true; }
+        }
+        if (hasError) {
+            e.preventDefault();
+            document.querySelector(".input-error")?.focus();
+        }
+    });
+}

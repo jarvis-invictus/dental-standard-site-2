@@ -11,11 +11,61 @@
     <meta property="og:url" content="https://smiledentalclinic.in/">
     <meta property="og:site_name" content="Dentalist - Smile Dental Clinic">
     <meta property="og:type" content="website">
+    <!-- Google Font: Figtree (Healthcare / Trust & Authority) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
+        /* Audit Fix #10: Google Font + Global Apply */
+        body, html { font-family: 'Figtree', sans-serif; }
+
+        /* Audit Fix #1: Smooth scroll */
+        html { scroll-behavior: smooth; }
+
+        /* Float animation for doctor image */
         @keyframes float {
             0% { transform: translateY(0px); }
             50% { transform: translateY(-15px); }
             100% { transform: translateY(0px); }
+        }
+
+        /* Audit Fix #2: Nav active state */
+        nav a.nav-active {
+            color: #4F46E5 !important;
+            border-bottom: 2px solid #4F46E5;
+            padding-bottom: 2px;
+        }
+
+        /* Audit Fix #5: Modal is already animated (scale+fade) — verified ✅ */
+
+        /* Audit Fix #9: Star ratings — make them bigger and gold */
+        .text-orange-star {
+            color: #F59E0B !important;
+            width: 20px !important;
+            height: 20px !important;
+        }
+
+        /* Audit Fix #8: Feature icons — consistent size */
+        .feature-icon-img {
+            width: 56px;
+            height: 56px;
+            object-fit: contain;
+        }
+
+        /* Audit Fix #11: Contact form validation */
+        .form-input.input-error {
+            border-color: #EF4444 !important;
+            box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.15) !important;
+        }
+        .form-error-msg {
+            display: none;
+            font-size: 12px;
+            color: #EF4444;
+            margin-top: 4px;
+            font-weight: 500;
+        }
+        .form-error-msg.visible {
+            display: block;
         }
     </style>
     <title>Dentalist - Premium Smile Dental Clinic in Aundh, Pune</title>
@@ -268,8 +318,33 @@
                         <p class="text-slate-800/70 font-medium text-base lg:text-lg w-[90%]">Experience state-of-the-art, painless dental treatments in Pune. From advanced implants to custom teeth alignment and cosmetic dentistry, we deliver care designed around your comfort.</p>
                         <a class="h-12 w-44 bg-primary text-white text-sm font-bold text-center leading-[3rem] rounded-xl transition-colors hover:bg-indigo-800" href="https://wa.me/919699577641?text=Hi%2C%20I%20would%20like%20to%20book%20an%20appointment%20at%20Dentalist%20Smile%20Dental%20Clinic." target="_blank" rel="noopener noreferrer">Book appointment</a>
                     </div>
-                    <div class="lg:w-1/2 mt-auto">
-                        <img class="" src="./assets/images/top-main.webp" alt="">
+                    <!-- Audit Fix #3: Hero image - proper constrained sizing -->
+                    <div class="lg:w-1/2 mt-auto flex items-end justify-center" style="max-height: 480px; overflow: hidden;">
+                        <img class="w-full h-auto object-contain object-bottom" src="./assets/images/top-main.webp" alt="Dental experts at Dentalist Clinic Pune" loading="eager">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Audit Fix #4: Stats / Trust Bar -->
+        <section class="section mb-8">
+            <div class="container">
+                <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+                    <div class="flex flex-col items-center justify-center gap-y-1 bg-white border border-slate-100 rounded-2xl py-6 px-4 shadow-sm text-center">
+                        <span class="text-3xl font-extrabold text-primary">500+</span>
+                        <span class="text-sm font-medium text-slate-500">Happy Patients</span>
+                    </div>
+                    <div class="flex flex-col items-center justify-center gap-y-1 bg-white border border-slate-100 rounded-2xl py-6 px-4 shadow-sm text-center">
+                        <span class="text-3xl font-extrabold text-primary">10+</span>
+                        <span class="text-sm font-medium text-slate-500">Years Experience</span>
+                    </div>
+                    <div class="flex flex-col items-center justify-center gap-y-1 bg-white border border-slate-100 rounded-2xl py-6 px-4 shadow-sm text-center">
+                        <span class="text-3xl font-extrabold text-primary">4.9★</span>
+                        <span class="text-sm font-medium text-slate-500">Google Rating</span>
+                    </div>
+                    <div class="flex flex-col items-center justify-center gap-y-1 bg-white border border-slate-100 rounded-2xl py-6 px-4 shadow-sm text-center">
+                        <span class="text-3xl font-extrabold text-primary">15+</span>
+                        <span class="text-sm font-medium text-slate-500">Treatments Offered</span>
                     </div>
                 </div>
             </div>
@@ -649,8 +724,8 @@
                         <!-- Feature item -->
                         <div class="flex items-center flex-col xs:flex-row sm:flex-col lg:flex-row gap-4">
                             <!-- Feature image -->
-                            <div class="w-16 h-16 shrink-0">
-                                <img src="./assets/images/No-judgment-ever.png" alt="No-judgment-ever">
+                            <div class="w-14 h-14 shrink-0">
+                                <img src="./assets/images/No-judgment-ever.png" alt="No-judgment-ever" class="feature-icon-img" loading="lazy">
                             </div>
                             <!-- Feature Content -->
                             <div class="text-center xs:text-start sm:text-center lg:text-start">
@@ -992,18 +1067,20 @@
                             <!-- name input -->
                             <div class="flex flex-col gap-y-2 relative">
                                 <label class="font-bold text-[13px] text-slate-600/90" for="name">NAME</label>
-                                <input class="form-input" id="name" type="text" placeholder="Enter your name..." required>
+                                <input class="form-input" id="name" type="text" placeholder="Enter your name..." required autocomplete="name">
                                 <svg class="w-6 h-6 absolute bottom-4 left-4 text-slate-400">
                                     <use href="#user"></use>
                                 </svg>
+                                <span class="form-error-msg" id="name-error">Please enter your full name.</span>
                             </div>
                             <!-- email input -->
                             <div class="flex flex-col gap-y-2 relative">
                                 <label class="font-bold text-[13px] text-slate-600/90" for="email">EMAIL ADDRESS</label>
-                                <input class="form-input" id="email" type="email" placeholder="Your email address..." required>
+                                <input class="form-input" id="email" type="email" placeholder="Your email address..." required autocomplete="email">
                                 <svg class="w-6 h-6 absolute bottom-4 left-4 text-slate-400">
                                     <use href="#envelope"></use>
                                 </svg>
+                                <span class="form-error-msg" id="email-error">Please enter a valid email address.</span>
                             </div>
                             <!-- messages input -->
                             <div class="flex flex-col gap-y-2 sm:col-span-2 relative">
