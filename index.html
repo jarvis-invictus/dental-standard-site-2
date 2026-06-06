@@ -347,20 +347,25 @@
                             <span onclick="document.getElementById('coord-box').style.display='none'" style="margin-left:12px; cursor:pointer; opacity:0.6;">✕</span>
                         </div>
 
-                        <!-- Overlay card (temporarily hidden while you find coords) -->
+                        <!-- Overlay card — EXACT COORDS from coordinate helper:
+                             User clicked center of "Dr. Samantha Alice" card:
+                             left: 176px (29.7%) | bottom: 109px (19.1%) | div: 592x571px
+                             Using transform: translate(-50%, 50%) to center card on exact click point
+                        -->
                         <div id="doctor-overlay-card" style="
                             position: absolute;
-                            bottom: 20%;
-                            left: 25%;
+                            left: 29.7%;
+                            bottom: 19.1%;
+                            transform: translate(-50%, 50%);
                             background: #ffffff;
                             border-radius: 12px;
-                            padding: 8px 12px 8px 8px;
+                            padding: 8px 14px 8px 8px;
                             box-shadow: 0 6px 20px rgba(0,0,0,0.13);
                             display: flex;
                             align-items: center;
-                            gap: 9px;
-                            width: 37%;
-                            z-index: 10;
+                            gap: 10px;
+                            width: 185px;
+                            z-index: 15;
                         ">
                             <div style="width: 36px; height: 36px; border-radius: 7px; overflow: hidden; flex-shrink: 0;">
                                 <img src="./assets/images/indian_doctor_portrait_clean.png" alt="Dr. Rahul Sharma"
