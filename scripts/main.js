@@ -8,7 +8,7 @@ const mobileMenuContainer = document.getElementById("mobile-menu-container");
 const mobileMenuClose = document.getElementById("close-button");
 const preLoader = document.querySelector(".preload-container");
 const sections = document.querySelectorAll(".section");
-const servicesItem = document.querySelectorAll(".services-item");
+const servicesItem = document.querySelectorAll(".service-card");
 const servicesContents = document.querySelector(".services-contents");
 const servicesMoreButton = document.querySelector(".services-more");
 const aElement = document.querySelectorAll("a");
@@ -62,56 +62,10 @@ const swiperTestimonial = new Swiper('.swiper-1', {
     },
 });
 
-const swiperBlogPost = new Swiper('.swiper-2', {
-    direction: 'horizontal',
-    loop: true,
-    autoplay: {
-        delay: 2000,
-        pauseOnMouseEnter: true,
-    },
-    slidesPerView: 1,
-    spaceBetween: 20,
-    breakpoints: {
-        640: {
-          slidesPerView: 2,
-        },
-        1024: {
-          slidesPerView: 3,
-        },
-        1280: {
-            slidesPerView: 4,
-        }
-    },
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-    },
-});
+// Blog section removed — swiper-2 no longer needed
 
 
-// Services Fade Animation
-servicesItem.forEach(function(item, i, arr){
-    item.addEventListener("mouseenter", function(){
-        arr.forEach(function(item){
-            item.style.opacity = "0.5";
-        });
-        item.style.opacity = "1";
-        servicesContents.style.opacity = "0.5";
-        servicesMoreButton.style.opacity = "0.5";
-    });
-});
-
-servicesItem.forEach(function(item, i, arr){
-    item.addEventListener("mouseleave", function(){
-        arr.forEach(function(item){
-            item.style.opacity = "1";
-        });
-        servicesContents.style.opacity = "1";
-        servicesMoreButton.style.opacity = "1";
-    });
-});
-
-
+// Services Fade Animation removed as requested
 // Section fade in Animation
 sections.forEach(function(param) {
     param.classList.add("section-fade");

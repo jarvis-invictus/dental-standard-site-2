@@ -269,7 +269,7 @@
         </section>
         
         <!-- Services Section -->
-        <section class="section mb-32" id="services">
+        <section class="section py-24 mb-16 bg-slate-50/50" id="services">
             <div class="container">
                 <div class="flex flex-col gap-14 lg:gap-y-16 xl:gap-y-20">
                     <!-- Services info contents -->
@@ -284,50 +284,274 @@
                         <!-- Right Side -->
                         <p class="text-center lg:text-start lg:max-w-screen-xs text-[15px] font-medium text-slate-800/70 -mb-8">We combine clinical expertise with advanced technology to deliver gentle, customized dental care for patients of all ages.</p>
                     </div>
-                    <!-- Services -->
-                    <div class="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-4 gap-5 child:transition-all child-hover:shadow-2xl mt-6 lg:mt-0 child-hover:shadow-slate-400/20 child-hover:border-gray-100 child:cursor-pointer">
-                        <!-- Service item -->
-                        <div class="services-item rounded-[32px] border p-4 flex flex-col gap-y-4">
-                            <img class="w-full rounded-[32px] h-[220px] object-cover" src="./assets/images/service-dentures.jpg" alt="Dentures">
-                            <div class="text-center space-y-2">
-                                <h3 class="text-slate-800 font-bold">Dentures</h3>
-                                <p class="text-[15px] font-medium text-slate-800/50">Natural-looking complete and partial dentures designed to restore your comfortable chewing and smile.</p>
+                    <style>
+                        .custom-services-grid {
+                            display: grid;
+                            grid-template-columns: repeat(1, minmax(0, 1fr));
+                            gap: 2rem;
+                            margin-top: 3rem;
+                            max-width: 72rem;
+                            margin-left: auto;
+                            margin-right: auto;
+                        }
+                        @media (min-width: 768px) {
+                            .custom-services-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+                        }
+                        @media (min-width: 1024px) {
+                            .custom-services-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2.5rem; }
+                        }
+                        .custom-service-card {
+                            background-color: #ffffff;
+                            border-radius: 1.5rem;
+                            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+                            border: 1px solid #f3f4f6;
+                            padding: 1.5rem;
+                            height: 100%;
+                            display: flex;
+                            flex-direction: column;
+                            transition: all 0.3s ease;
+                            cursor: pointer;
+                        }
+                        .custom-service-card:hover {
+                            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+                        }
+                        .custom-learn-more {
+                            display: inline-flex;
+                            align-items: center;
+                            gap: 0.5rem;
+                            font-size: 0.875rem;
+                            font-weight: 600;
+                            color: #4f46e5;
+                            margin-top: auto;
+                            padding-top: 1rem;
+                            background: transparent;
+                            border: none;
+                            cursor: pointer;
+                            transition: color 0.3s ease;
+                        }
+                        .custom-service-card:hover .custom-learn-more {
+                            color: #3730a3;
+                        }
+                        .custom-learn-more svg {
+                            width: 1rem;
+                            height: 1rem;
+                            transition: transform 0.3s ease;
+                        }
+                        .custom-service-card:hover .custom-learn-more svg {
+                            transform: translateX(4px);
+                        }
+                        .custom-icon-box {
+                            width: 5rem;
+                            height: 5rem;
+                            border-radius: 1.5rem;
+                            background-color: #f3f4f6;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            margin-bottom: 1.5rem;
+                            flex-shrink: 0;
+                            transition: background-color 0.3s ease;
+                        }
+                        .custom-service-card:hover .custom-icon-box {
+                            background-color: #eef2ff;
+                        }
+                        .custom-icon-img {
+                            width: 4rem;
+                            height: 4rem;
+                            object-fit: contain;
+                            border-radius: 1rem;
+                        }
+                        .custom-service-title {
+                            font-size: 1.125rem;
+                            font-weight: 700;
+                            color: #0f172a;
+                            margin-bottom: 0.5rem;
+                            line-height: 1.375;
+                            transition: color 0.3s ease;
+                        }
+                        .custom-service-card:hover .custom-service-title {
+                            color: #4f46e5;
+                        }
+                        .custom-service-desc {
+                            font-size: 0.875rem;
+                            color: #64748b;
+                            line-height: 1.625;
+                            flex: 1 1 0%;
+                            margin-bottom: 1.25rem;
+                        }
+                    </style>
+
+                    <div class="custom-services-grid">
+                        <!-- Service item 1 -->
+                        <div class="service-card-wrapper h-full opacity-0 translate-y-5 transition-all duration-500" data-service-index="0" style="perspective: 1000px;">
+                            <div class="service-card-inner h-full transition-transform duration-200 ease-out" style="transform-style: preserve-3d;">
+                            <div class="custom-service-card" style="transform: translateZ(20px); cursor: pointer;">
+                                    <div class="custom-icon-box" style="transform: translateZ(30px);">
+                                        <img src="./assets/images/services-svg/General Dentistry.svg" alt="General Dentistry icon" class="custom-icon-img" />
+                                    </div>
+                                    <h3 class="custom-service-title" style="transform: translateZ(25px);">
+                                        General Dentistry
+                                    </h3>
+                                    <p class="custom-service-desc" style="transform: translateZ(20px);">
+                                        General dentistry covers everything needed to keep your mouth healthy — routine check-ups, professional cleanings, fillings, and early detection of issues like cavities and gum disease.
+                                    </p>
+                                    <button class="custom-learn-more" style="transform: translateZ(25px);">
+                                        Learn More
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                                    </button>
+                                </div>
                             </div>
                         </div>
-                        <!-- Service item -->
-                        <div class="services-item rounded-[32px] border p-4 flex flex-col gap-y-4">
-                            <img class="w-full rounded-[32px] h-[220px] object-cover" src="./assets/images/service-implants.jpg" alt="Implants">
-                            <div class="text-center space-y-2">
-                                <h3 class="text-slate-800 font-bold">Implants</h3>
-                                <p class="text-[15px] font-medium text-slate-800/50">Stable, permanent replacements for missing teeth using premium implants that function like natural roots.</p>
+
+                        <!-- Service item 2 -->
+                        <div class="service-card-wrapper h-full opacity-0 translate-y-5 transition-all duration-500" data-service-index="1" style="perspective: 1000px;">
+                            <div class="service-card-inner h-full transition-transform duration-200 ease-out" style="transform-style: preserve-3d;">
+                            <div class="custom-service-card" style="transform: translateZ(20px); cursor: pointer;">
+                                    <div class="custom-icon-box" style="transform: translateZ(30px);">
+                                        <img src="./assets/images/services-svg/Orthodontics.svg" alt="Orthodontics icon" class="custom-icon-img" />
+                                    </div>
+                                    <h3 class="custom-service-title" style="transform: translateZ(25px);">
+                                        Orthodontics
+                                    </h3>
+                                    <p class="custom-service-desc" style="transform: translateZ(20px);">
+                                        Orthodontics corrects crooked teeth, gaps, crowding, and bite problems using braces or clear aligners.
+                                    </p>
+                                    <button class="custom-learn-more" style="transform: translateZ(25px);">
+                                        Learn More
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                                    </button>
+                                </div>
                             </div>
                         </div>
-                        <!-- Service item -->
-                        <div class="services-item rounded-[32px] border p-4 flex flex-col gap-y-4">
-                            <img class="w-full rounded-[32px] h-[220px] object-cover" src="./assets/images/service-whitening.jpg" alt="Whitening">
-                            <div class="text-center space-y-2">
-                                <h3 class="text-slate-800 font-bold">Whitening</h3>
-                                <p class="text-[15px] font-medium text-slate-800/50">Safe, advanced whitening procedures that quickly erase deep stains and restore brilliant brightness.</p>
+
+                        <!-- Service item 3 -->
+                        <div class="service-card-wrapper h-full opacity-0 translate-y-5 transition-all duration-500" data-service-index="2" style="perspective: 1000px;">
+                            <div class="service-card-inner h-full transition-transform duration-200 ease-out" style="transform-style: preserve-3d;">
+                            <div class="custom-service-card" style="transform: translateZ(20px); cursor: pointer;">
+                                    <div class="custom-icon-box" style="transform: translateZ(30px);">
+                                        <img src="./assets/images/services-svg/Cosmetic Dentistry.svg" alt="Cosmetic Dentistry icon" class="custom-icon-img" />
+                                    </div>
+                                    <h3 class="custom-service-title" style="transform: translateZ(25px);">
+                                        Cosmetic Dentistry
+                                    </h3>
+                                    <p class="custom-service-desc" style="transform: translateZ(20px);">
+                                        Cosmetic dentistry focuses on improving the appearance of your smile through teeth whitening, porcelain veneers, composite bonding, gum contouring, and smile designing.
+                                    </p>
+                                    <button class="custom-learn-more" style="transform: translateZ(25px);">
+                                        Learn More
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                                    </button>
+                                </div>
                             </div>
                         </div>
-                        <!-- Service item --> 
-                        <div class="services-item rounded-[32px] border p-4 flex flex-col gap-y-4">
-                            <img class="w-full rounded-[32px] h-[220px] object-cover" src="./assets/images/service-rootcanal.jpg" alt="Root Canal">
-                            <div class="text-center space-y-2">
-                                <h3 class="text-slate-800 font-bold">Root Canal</h3>
-                                <p class="text-[15px] font-medium text-slate-800/50">Gentle and precise root canal therapy to save damaged teeth and relieve chronic pain effectively.</p>
+
+                        <!-- Service item 4 -->
+                        <div class="service-card-wrapper h-full opacity-0 translate-y-5 transition-all duration-500" data-service-index="3" style="perspective: 1000px;">
+                            <div class="service-card-inner h-full transition-transform duration-200 ease-out" style="transform-style: preserve-3d;">
+                            <div class="custom-service-card" style="transform: translateZ(20px); cursor: pointer;">
+                                    <div class="custom-icon-box" style="transform: translateZ(30px);">
+                                        <img src="./assets/images/services-svg/Dental Implants.svg" alt="Dental Implants icon" class="custom-icon-img" />
+                                    </div>
+                                    <h3 class="custom-service-title" style="transform: translateZ(25px);">
+                                        Dental Implants
+                                    </h3>
+                                    <p class="custom-service-desc" style="transform: translateZ(20px);">
+                                        Dental implants are titanium posts surgically placed in the jawbone to replace missing tooth roots.
+                                    </p>
+                                    <button class="custom-learn-more" style="transform: translateZ(25px);">
+                                        Learn More
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Service item 5 -->
+                        <div class="service-card-wrapper h-full opacity-0 translate-y-5 transition-all duration-500" data-service-index="4" style="perspective: 1000px;">
+                            <div class="service-card-inner h-full transition-transform duration-200 ease-out" style="transform-style: preserve-3d;">
+                            <div class="custom-service-card" style="transform: translateZ(20px); cursor: pointer;">
+                                    <div class="custom-icon-box" style="transform: translateZ(30px);">
+                                        <img src="./assets/images/services-svg/Pediatric Dentistry.svg" alt="Kids Dentistry icon" class="custom-icon-img" />
+                                    </div>
+                                    <h3 class="custom-service-title" style="transform: translateZ(25px);">
+                                        Kids Dentistry
+                                    </h3>
+                                    <p class="custom-service-desc" style="transform: translateZ(20px);">
+                                        Our child-friendly dental clinic is designed to make every visit fun and stress-free.
+                                    </p>
+                                    <button class="custom-learn-more" style="transform: translateZ(25px);">
+                                        Learn More
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Service item 6 -->
+                        <div class="service-card-wrapper h-full opacity-0 translate-y-5 transition-all duration-500" data-service-index="5" style="perspective: 1000px;">
+                            <div class="service-card-inner h-full transition-transform duration-200 ease-out" style="transform-style: preserve-3d;">
+                            <div class="custom-service-card" style="transform: translateZ(20px); cursor: pointer;">
+                                    <div class="custom-icon-box" style="transform: translateZ(30px);">
+                                        <img src="./assets/images/services-svg/Emergency Care.svg" alt="Emergency Care icon" class="custom-icon-img" />
+                                    </div>
+                                    <h3 class="custom-service-title" style="transform: translateZ(25px);">
+                                        Emergency Dental Care
+                                    </h3>
+                                    <p class="custom-service-desc" style="transform: translateZ(20px);">
+                                        Dental emergencies — toothaches, broken teeth, knocked-out teeth, lost fillings — require immediate attention.
+                                    </p>
+                                    <button class="custom-learn-more" style="transform: translateZ(25px);">
+                                        Learn More
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <!-- More Service Call to Action Button -->
-                    <div class="services-more transition-all">
-                        <a href="https://wa.me/919699577641?text=Hi%2C%20I%20would%20like%20to%20know%20more%20about%20your%20services." target="_blank" rel="noopener noreferrer" class="w-max mx-auto flex items-center gap-x-1 p-3 rounded-xl text-sm font-bold text-primary bg-primary/10 transition-colors hover:bg-primary/20">
-                            View all service list
-                            <svg class="w-5 h-5">
-                                <use href="#arrow-right-circle"></use>
-                            </svg>
-                        </a>
-                    </div>
+                    
+                    <script>
+                        document.addEventListener("DOMContentLoaded", () => {
+                            // Scroll reveal animation
+                            const observer = new IntersectionObserver((entries) => {
+                                entries.forEach((entry, index) => {
+                                    if (entry.isIntersecting) {
+                                        setTimeout(() => {
+                                            entry.target.classList.remove("opacity-0", "translate-y-5");
+                                            entry.target.classList.add("opacity-100", "translate-y-0");
+                                        }, index * 100);
+                                        observer.unobserve(entry.target);
+                                    }
+                                });
+                            }, { threshold: 0.1 });
+
+                            document.querySelectorAll(".service-card-wrapper").forEach((card) => {
+                                observer.observe(card);
+                            });
+
+                            // 3D Tilt effect
+                            document.querySelectorAll(".service-card-wrapper").forEach((wrapper) => {
+                                const inner = wrapper.querySelector(".service-card-inner");
+                                
+                                wrapper.addEventListener("mousemove", (e) => {
+                                    const rect = wrapper.getBoundingClientRect();
+                                    const x = e.clientX - rect.left; 
+                                    const y = e.clientY - rect.top;  
+                                    
+                                    const centerX = rect.width / 2;
+                                    const centerY = rect.height / 2;
+                                    
+                                    const rotateX = -((y - centerY) / centerY) * 10;
+                                    const rotateY = ((x - centerX) / centerX) * 10;
+                                    
+                                    inner.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+                                });
+                                
+                                wrapper.addEventListener("mouseleave", () => {
+                                    inner.style.transform = `rotateX(0deg) rotateY(0deg)`;
+                                });
+                            });
+                        });
+                    </script>
                 </div>
             </div>
         </section>
@@ -792,5 +1016,401 @@
             </div>
         </div>
     </footer>
+
+    <!-- Treatment Modal -->
+    <style>
+        .treatment-modal-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+        .treatment-modal-container.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        .treatment-modal-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(4px);
+        }
+        .treatment-modal {
+            position: relative;
+            background: #ffffff;
+            width: 100%;
+            max-width: 620px;
+            max-height: 90vh;
+            border-radius: 24px;
+            padding: 32px;
+            overflow-y: auto;
+            transform: scale(0.95) translateY(20px);
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            z-index: 10000;
+        }
+        .treatment-modal-container.active .treatment-modal {
+            transform: scale(1) translateY(0);
+        }
+        .treatment-modal-close {
+            position: absolute;
+            top: 24px;
+            right: 24px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #f1f5f9;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background 0.2s;
+            color: #64748b;
+        }
+        .treatment-modal-close:hover {
+            background: #e2e8f0;
+            color: #0f172a;
+        }
+        .treatment-modal-subtitle {
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #4f46e5;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        .treatment-modal-title {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #0f172a;
+            margin-bottom: 24px;
+            line-height: 1.2;
+        }
+        .treatment-modal-desc {
+            font-size: 1.125rem;
+            line-height: 1.6;
+            color: #475569;
+            margin-bottom: 24px;
+        }
+        .treatment-modal-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            background: #f8fafe;
+            padding: 20px;
+            border-radius: 16px;
+            border: 1px solid #e2e8f0;
+            margin-bottom: 24px;
+        }
+        .tm-grid-item {
+            display: flex;
+            flex-direction: column;
+        }
+        .tm-grid-label {
+            font-weight: 600;
+            color: #0f172a;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 4px;
+        }
+        .tm-grid-value {
+            font-size: 0.95rem;
+            color: #475569;
+            line-height: 1.5;
+        }
+        .tm-grid-icon {
+            color: #4f46e5;
+            width: 20px;
+            height: 20px;
+        }
+        .treatment-modal-benefits-title {
+            font-weight: 700;
+            font-size: 1.25rem;
+            color: #0f172a;
+            margin-bottom: 16px;
+        }
+        .treatment-modal-benefits {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 32px 0;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .treatment-modal-benefits li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            font-size: 1rem;
+            color: #475569;
+            line-height: 1.5;
+        }
+        .tm-check-icon {
+            color: #10b981;
+            width: 20px;
+            height: 20px;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+        .treatment-modal-actions {
+            display: flex;
+            justify-content: flex-end;
+            gap: 12px;
+            border-top: 1px solid #e2e8f0;
+            padding-top: 24px;
+        }
+        .tm-btn-back {
+            padding: 12px 24px;
+            border-radius: 9999px;
+            background: #f1f5f9;
+            color: #475569;
+            font-weight: 600;
+            border: 1px solid #e2e8f0;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-size: 1rem;
+        }
+        .tm-btn-back:hover {
+            background: #e2e8f0;
+            color: #0f172a;
+        }
+        .tm-btn-book {
+            padding: 12px 28px;
+            border-radius: 9999px;
+            background: #10b981;
+            color: #ffffff;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+        }
+        .tm-btn-book:hover {
+            background: #059669;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+        }
+        
+        @media (max-width: 640px) {
+            .treatment-modal {
+                padding: 24px;
+                border-radius: 20px 20px 0 0;
+                max-height: 95vh;
+                margin-top: auto;
+                transform: translateY(100%);
+            }
+            .treatment-modal-container.active .treatment-modal {
+                transform: translateY(0);
+            }
+            .treatment-modal-grid {
+                grid-template-columns: 1fr;
+            }
+            .treatment-modal-actions {
+                flex-direction: column-reverse;
+            }
+            .tm-btn-book {
+                justify-content: center;
+            }
+        }
+    </style>
+
+    <div class="treatment-modal-container" id="treatmentModal">
+        <div class="treatment-modal-overlay" id="tmOverlay"></div>
+        <div class="treatment-modal">
+            <button class="treatment-modal-close" id="tmClose">
+                <svg xmlns="http://www.w3.org/.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
+            
+            <p class="treatment-modal-subtitle">Treatment Details</p>
+            <h2 class="treatment-modal-title" id="tmTitle">Service Title</h2>
+            
+            <p class="treatment-modal-desc" id="tmDesc">Service description goes here.</p>
+            
+            <div class="treatment-modal-grid">
+                <div class="tm-grid-item">
+                    <p class="tm-grid-label">
+                        <svg class="tm-grid-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                        Duration
+                    </p>
+                    <p class="tm-grid-value" id="tmDuration">1 Visit</p>
+                </div>
+                <div class="tm-grid-item">
+                    <p class="tm-grid-label">
+                        <svg class="tm-grid-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                        Ideal For
+                    </p>
+                    <p class="tm-grid-value" id="tmIdealFor">Everyone</p>
+                </div>
+            </div>
+            
+            <h4 class="treatment-modal-benefits-title">Key Benefits</h4>
+            <ul class="treatment-modal-benefits" id="tmBenefits">
+                <!-- Benefits injected here -->
+            </ul>
+            
+            <div class="treatment-modal-actions">
+                <button class="tm-btn-back" id="tmBtnBack">Back</button>
+                <a href="#" class="tm-btn-book" id="tmBtnBook" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+                    Book Appointment
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const treatmentData = [
+            {
+                title: "General Dentistry",
+                desc: "General dentistry covers everything needed to keep your mouth healthy — routine check-ups, professional cleanings, fillings, and early detection of issues like cavities and gum disease. Regular visits every 6 months prevent small problems from becoming costly ones.",
+                duration: "1 Visit (approx. 30 - 45 mins)",
+                idealFor: "Individuals and families looking to maintain optimal oral health. Highly recommended twice a year.",
+                benefits: [
+                    "Removes plaque, tartar, and surface stains",
+                    "Prevents gum disease, bad breath, and future tooth decay",
+                    "Enamel strengthening to protect against sensitivity",
+                    "Early detection of potential dental issues"
+                ]
+            },
+            {
+                title: "Orthodontics",
+                desc: "Orthodontics corrects crooked teeth, gaps, crowding, and bite problems using braces or clear aligners. We offer traditional metal braces, ceramic braces, and Invisalign — all designed to give you a straight, confident smile.",
+                duration: "6 - 18 Months (based on complexity)",
+                idealFor: "Adults and teenagers looking to align their teeth comfortably with traditional or invisible braces.",
+                benefits: [
+                    "Discreet treatment with near-invisible clear aligners",
+                    "Easier oral hygiene compared to metal braces",
+                    "Corrects overbites, underbites, crowding, and gaps",
+                    "Boosts self-confidence and improves speech"
+                ]
+            },
+            {
+                title: "Cosmetic Dentistry",
+                desc: "Cosmetic dentistry focuses on improving the appearance of your smile through teeth whitening, porcelain veneers, composite bonding, gum contouring, and smile designing. We use digital smile design to preview your results before treatment begins.",
+                duration: "1 Visit (Whitening) / 2-3 Visits (Veneers)",
+                idealFor: "Anyone looking to repair dental imperfections, brighten their smile, or redesign the shape and color of their teeth.",
+                benefits: [
+                    "Instantly brightens discolored or stained teeth",
+                    "Hides chips, cracks, or gaps with porcelain veneers",
+                    "Custom shades that perfectly match your facial aesthetics",
+                    "Long-lasting, stain-resistant, and natural-looking results"
+                ]
+            },
+            {
+                title: "Dental Implants",
+                desc: "Dental implants are titanium posts surgically placed in the jawbone to replace missing tooth roots. A crown is attached on top, resulting in a permanent, natural-looking tooth replacement with no slipping or discomfort.",
+                duration: "3 - 6 Months (including healing time)",
+                idealFor: "Patients with missing teeth who want a permanent, natural-feeling replacement that restores full chewing function.",
+                benefits: [
+                    "Functions and feels exactly like a natural tooth",
+                    "Prevents bone loss and preserves facial structure",
+                    "Permanent solution with no slipping or discomfort",
+                    "Restores natural chewing and biting efficiency"
+                ]
+            },
+            {
+                title: "Kids Dentistry",
+                desc: "Our child-friendly dental clinic is designed to make every visit fun and stress-free. We specialise in preventive care, pit and fissure sealants, fluoride treatments, and space maintainers for growing smiles.",
+                duration: "1 Visit (approx. 30 mins)",
+                idealFor: "Children and toddlers needing preventive care, cavity treatments, or general oral health monitoring.",
+                benefits: [
+                    "Child-friendly environment to reduce dental anxiety",
+                    "Specialized treatments like sealants and fluoride",
+                    "Early monitoring of jaw development and tooth alignment",
+                    "Gentle, painless approach to pediatric care"
+                ]
+            },
+            {
+                title: "Emergency Dental Care",
+                desc: "Dental emergencies — toothaches, broken teeth, knocked-out teeth, lost fillings — require immediate attention. We offer same-day emergency appointments and are available on WhatsApp for triage advice 24/7.",
+                duration: "Immediate (Same-day appointment)",
+                idealFor: "Patients experiencing severe pain, dental trauma, knocked-out teeth, or sudden severe swelling.",
+                benefits: [
+                    "Immediate pain relief and infection control",
+                    "Same-day priority appointments",
+                    "24/7 WhatsApp triage and guidance",
+                    "Prevents further damage to the affected tooth"
+                ]
+            }
+        ];
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const modal = document.getElementById("treatmentModal");
+            const overlay = document.getElementById("tmOverlay");
+            const closeBtn = document.getElementById("tmClose");
+            const backBtn = document.getElementById("tmBtnBack");
+            const bookBtn = document.getElementById("tmBtnBook");
+
+            const tmTitle = document.getElementById("tmTitle");
+            const tmDesc = document.getElementById("tmDesc");
+            const tmDuration = document.getElementById("tmDuration");
+            const tmIdealFor = document.getElementById("tmIdealFor");
+            const tmBenefits = document.getElementById("tmBenefits");
+
+            const openModal = (index) => {
+                const data = treatmentData[index];
+                if (!data) return;
+
+                tmTitle.textContent = data.title;
+                tmDesc.textContent = data.desc;
+                tmDuration.textContent = data.duration;
+                tmIdealFor.textContent = data.idealFor;
+
+                // Build benefits list
+                tmBenefits.innerHTML = "";
+                data.benefits.forEach(benefit => {
+                    const li = document.createElement("li");
+                    li.innerHTML = `<svg class="tm-check-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg> <span>${benefit}</span>`;
+                    tmBenefits.appendChild(li);
+                });
+
+                // Update WhatsApp link
+                const phone = "919699577641";
+                const message = encodeURIComponent(`Hi, I would like to book a consultation for ${data.title} at Dentalist.`);
+                bookBtn.href = `https://wa.me/${phone}?text=${message}`;
+
+                // Show modal
+                modal.classList.add("active");
+                document.body.style.overflow = "hidden"; // Prevent scrolling
+            };
+
+            const closeModal = () => {
+                modal.classList.remove("active");
+                document.body.style.overflow = "unset";
+            };
+
+            // Attach listeners to service cards
+            const serviceCards = document.querySelectorAll(".service-card-wrapper");
+            serviceCards.forEach(card => {
+                card.addEventListener("click", () => {
+                    const index = card.getAttribute("data-service-index");
+                    openModal(parseInt(index));
+                });
+            });
+
+            // Attach close listeners
+            overlay.addEventListener("click", closeModal);
+            closeBtn.addEventListener("click", closeModal);
+            backBtn.addEventListener("click", closeModal);
+        });
+    </script>
 </body>
 </html>
